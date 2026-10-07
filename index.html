@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ficha de Agente — Ordem Paranormal</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f1f1;--card:#fff;--tx:#1a1416;--mut:#6b6165;--ac:#a3122a;--bd:#ddd3d5;--in:#faf7f7}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#110d0f;--card:#1c1517;--tx:#eee6e8;--mut:#a09296;--ac:#e0344f;--bd:#3a2b2f;--in:#251b1e}}
+:root[data-theme="dark"]{--bg:#110d0f;--card:#1c1517;--tx:#eee6e8;--mut:#a09296;--ac:#e0344f;--bd:#3a2b2f;--in:#251b1e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,Segoe UI,Roboto,sans-serif}
+main{max-width:980px;margin:auto;padding:14px}
+h1{font-size:20px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;color:var(--ac)}
+h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px;margin-bottom:12px}
+.g{display:grid;gap:8px}.g2{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+label{font-size:12px;color:var(--mut);display:block}
+input,select,textarea,button{font:inherit;color:var(--tx);background:var(--in);border:1px solid var(--bd);border-radius:6px;padding:6px 8px;width:100%}
+button{cursor:pointer;width:auto;background:var(--ac);color:#fff;border:0}
+button.s{background:var(--in);color:var(--tx);border:1px solid var(--bd);padding:2px 9px}
+.att{text-align:center}.att input{text-align:center;font-size:20px;font-weight:700}
+.bar{display:flex;align-items:center;gap:6px;margin-bottom:6px}.bar b{min-width:34px}
+.bar span{flex:1;height:10px;background:var(--in);border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ac)}
+.bar.pe i{background:#c9922b}.bar.sa i{background:#4a7fd1}
+.bar em{min-width:64px;text-align:right;font-style:normal;font-variant-numeric:tabular-nums}
+.sk{display:grid;grid-template-columns:1fr 92px 46px 34px;gap:6px;align-items:center;padding:3px 0;border-bottom:1px solid var(--bd)}
+.sk small{color:var(--mut)}.sk select{padding:3px}.sk button{padding:3px 7px}
+.res{position:sticky;top:env(safe-area-inset-top,0px);background:var(--ac);color:#fff;border-radius:8px;padding:8px 12px;margin-bottom:12px;min-height:38px;z-index:5}
+.top{display:flex;justify-content:space-between;align-items:center}
+.wrap{overflow-x:auto}
+.sk{grid-template-columns:1fr 92px 58px 52px 34px}
+[hidden]{display:none!important}
+.tabs{display:flex;gap:8px;margin-bottom:12px}
+.hi{display:flex;gap:8px;justify-content:space-between;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--bd)}
+.hi small{color:var(--mut)}
+.ar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.ar select,.ar input{width:auto}
+.bar span{position:relative}.bar u{position:absolute;top:0;right:0;height:100%;display:block;text-decoration:none;background:#6b0010;box-shadow:-2px 0 0 #ff5a6e}
+.bar.pe u{background:#7a5c00;box-shadow:-2px 0 0 #ffd54a}.bar.sa u{background:#143a85;box-shadow:-2px 0 0 #7fb0ff}
+.cd{display:flex;gap:8px;align-items:flex-start;padding:4px 0;border-bottom:1px solid var(--bd);font-size:13px}.cd input{width:auto;margin-top:3px}.cd small{color:var(--mut)}
+#cnd{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 14px}
+@media print{:root:root:root{--bg:#fff;--card:#fff;--tx:#000;--mut:#444;--bd:#bbb;--in:#fff;--ac:#a3122a}.np,button,.res,.tabs{display:none!important}input,select,textarea{border:0!important;background:transparent!important;color:#000!important;appearance:none}.card{break-inside:avoid}main{max-width:none;padding:0}}
+.tabs{flex-wrap:wrap}.card h2{cursor:pointer;user-select:none}.card h2::before{content:"▾ ";color:var(--ac)}.card.fc h2::before{content:"▸ "}.card.fc>*:not(h2){display:none!important}#crop h2::before{content:""}
+.d20{width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;background:var(--ac);color:#fff;clip-path:polygon(50% 0,96% 26%,96% 74%,50% 100%,4% 74%,4% 26%)}
+.d20.r{animation:rl .45s linear infinite}@keyframes rl{to{transform:rotate(360deg)}}
+.d20.win{background:#c9922b;transform:scale(1.18)}.d20.lose{opacity:.4}
+@media (prefers-reduced-motion:reduce){.d20.r{animation:none}}
+#cfg h2::before{content:""}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes shk{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}40%{transform:translateX(9px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.glow20{animation:gl 1.6s ease-out}@keyframes gl{0%{box-shadow:inset 0 0 0 0 #ffd36b}35%{box-shadow:inset 0 0 70px 14px #ffb300aa}100%{box-shadow:inset 0 0 0 0 #ffd36b00}}
+.mini{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:6px}.mini label{font-size:11px;margin-bottom:1px}.mini input{padding:3px 6px;font-size:13px;text-align:center}
+html{-webkit-text-size-adjust:100%}button{min-height:34px}
+@media(max-width:520px){main{padding:8px}.card{padding:10px}h1{font-size:17px}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tabs button{white-space:nowrap}.sk{grid-template-columns:1fr 80px 40px 42px 30px;font-size:13px;gap:4px}.sk select{font-size:12px}.att input{font-size:18px}.mini{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}#cnd{grid-template-columns:1fr}.res{font-size:13px}}
+#pick h2::before{content:""}.pi{padding:8px 6px;border-bottom:1px solid var(--bd);cursor:pointer}.pi:active{background:var(--in)}.chip{display:inline-flex;gap:6px;align-items:center;background:var(--in);border:1px solid var(--bd);border-radius:12px;padding:2px 8px;font-size:12px}.chip b{cursor:pointer;opacity:.7}.pg{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);padding:8px 6px 2px}
+.fx20,.fx1{font:900 76px/1 system-ui,sans-serif;letter-spacing:.04em;text-align:center}
+.fx20{color:#fff3c4;text-shadow:0 0 10px var(--fxc,#ffb300),0 0 26px var(--fxc,#ffb300),0 0 46px #ffb300;animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+.fx1{color:#ff4d5e;text-shadow:0 0 10px #000,0 0 24px #7a0010;animation:shk .5s both}
+.ibx{display:inline-block;border:1px solid var(--ac);border-radius:6px;padding:0 5px;font-size:11px;color:var(--ac);margin-left:4px;white-space:nowrap}
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#a3122a"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"></head><body><main>
+<div class="top np"><h1>Ficha de Agente</h1><div style="display:flex;gap:6px"><button class="s" onclick="$('cfg').hidden=false">🎨 Dados</button><button class="s" onclick="tema()">☾ / ☀</button></div></div>
+<div class="card np" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><select id="fsel" style="width:auto;flex:1;min-width:150px" onchange="troca(this.value)"></select><button onclick="nova()">+ Nova</button><button class="s" onclick="dup()">Duplicar</button><button class="s" id="bdel" onclick="del()">Excluir</button><button class="s" onclick="imprimir()">🖨 Imprimir</button><small style="color:var(--mut);width:100%">Se a impressão não abrir, use Ctrl+P (ou o menu do navegador).</small></div>
+<div class="res" id="res">Clique em 🎲 numa perícia para rolar.</div>
+
+<div class="tabs np"><button id="tb1" onclick="tab(1)">Ficha</button><button id="tb3" class="s" onclick="tab(3)">Ataques</button><button id="tb5" class="s" onclick="tab(5)">Inventário</button><button id="tb2" class="s" onclick="tab(2)">Habilidades</button><button id="tb6" class="s" onclick="tab(6)">Rituais</button><button id="tb4" class="s" onclick="tab(4)">Background</button><span style="margin-left:auto;display:flex;gap:6px"><button class="s" onclick="colAll(true)">▸ Recolher</button><button class="s" onclick="colAll(false)">▾ Expandir</button></span></div>
+<div id="alt" class="card np" hidden style="border-color:var(--ac);padding:8px 10px;font-size:13px"></div>
+<div id="t1"><div class="card"><h2>Identificação</h2><div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:6px;align-items:center;margin:0 auto"><div id="fph" style="width:200px;height:200px;border:1px dashed var(--bd);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;background:var(--in)">Sem imagem</div><img id="foto" alt="Imagem do personagem" style="max-width:200px;max-height:260px;border-radius:10px;border:1px solid var(--bd);display:none"><input type="file" id="fimg" accept="image/*" style="display:none" onchange="img(this.files[0])"><div style="display:flex;gap:6px"><button onclick="$('fimg').click()">Escolher imagem</button><button class="s" onclick="delImg()">Remover</button></div></div>
+<div class="g g2" style="flex:1;min-width:240px">
+<div><label>Nome do agente</label><input id="nome"></div>
+<div><label>Idade</label><input id="idade" type="number" min="0"></div>
+<div><label>Jogador</label><input id="jog"></div>
+<div><label>Origem</label><select id="origem"></select><input id="origem2" hidden placeholder="Nome da origem" style="margin-top:4px;padding:3px 6px;font-size:12px"><div id="ogs" hidden style="display:flex;gap:4px;margin-top:4px"><select id="og1" style="padding:3px;font-size:12px"></select><select id="og2" style="padding:3px;font-size:12px"></select></div></div><div id="obox" style="grid-column:1/-1;font-size:13px;color:var(--mut)"></div>
+<div><label>Classe</label><select id="classe"><option>Combatente</option><option>Especialista</option><option>Ocultista</option><option>Mundano</option><option>Outro</option></select><input id="classe2" hidden placeholder="Nome da classe" style="margin-top:4px;padding:3px 6px;font-size:12px"></div>
+<div><label>Trilha</label><select id="trilha"></select><input id="trilha2" hidden placeholder="Nome da trilha" style="margin-top:4px;padding:3px 6px;font-size:12px"></div>
+<div><label>NEX</label><select id="nex"></select><input id="nex2" hidden placeholder="Ex: 12" style="margin-top:4px;padding:3px 6px;font-size:12px;width:90px"></div>
+<div id="ch" hidden><label>Combatente: Luta ou Pontaria</label><select id="cl1"><option>Luta</option><option>Pontaria</option></select></div>
+<div id="ch2" hidden><label>Combatente: Fortitude ou Reflexos</label><select id="cl2"><option>Fortitude</option><option>Reflexos</option></select></div>
+<div id="cbx" style="grid-column:1/-1;font-size:13px;color:var(--mut)"></div>
+</div></div></div>
+
+<div class="card"><h2>Atributos <small id="apts" style="text-transform:none;letter-spacing:0;margin-left:6px"></small></h2><div class="g" style="grid-template-columns:repeat(5,1fr)" id="atts"></div></div>
+
+<div class="card"><h2>Status</h2>
+<div id="bars"></div>
+<div class="mini" style="margin-bottom:8px"><div><label>Ajuste máx. PV</label><input id="bm_pv" type="number" value="0"></div><div><label>Ajuste máx. PE</label><input id="bm_pe" type="number" value="0"></div><div><label>Ajuste máx. SAN</label><input id="bm_sa" type="number" value="0"></div></div>
+<div class="mini"><div><label>Defesa</label><input id="defesa" readonly style="font-weight:700"></div><div><label>Equip.</label><input id="bdef" type="number" value="0" readonly title="Soma dos +EQUIP do quadro EQUIP. (aba Ataques)"></div><div><label>Outros</label><input id="odef" type="number" value="0"></div><div><label>Esquiva</label><input id="esq" readonly style="font-weight:700"></div><div><label>Bloqueio</label><input id="blq" readonly style="font-weight:700"></div><div><label>Deslocamento</label><input id="desl" value="9m"></div></div>
+<p style="color:var(--mut);font-size:11px;margin:6px 0 0">Defesa = 10 + AGI + Equip. + Outros · Esquiva = Defesa + Reflexos · Bloqueio = Fortitude (só se treinado)</p></div>
+<div class="card"><h2>Perícias</h2><input id="busca" placeholder="Pesquisar perícia..." oninput="fil()" style="margin-bottom:8px"><div class="wrap" id="skills"></div></div>
+<div class="card"><h2>Resistências</h2><div class="g g2" id="rsl"></div><label style="margin-top:8px">Outras resistências, imunidades e vulnerabilidades</label><textarea id="resx" rows="2"></textarea></div>
+<div class="card"><h2>Condições</h2><div id="cmsg" style="margin-bottom:8px;font-size:13px"></div><div id="cnd"></div><p style="color:var(--mut);font-size:12px;margin:8px 0 0">Resumos: confira o texto exato no livro. Os penalizadores em dados e na Defesa entram sozinhos nas rolagens e na Defesa.</p></div>
+
+
+
+</div>
+<div id="t2" hidden>
+<div class="card"><h2>Habilidades da classe</h2><div id="cab"></div></div>
+<div class="card"><h2>Poder de origem</h2><div id="opw"></div></div>
+<div class="card"><h2>Adicionar da lista</h2>
+<div class="g g2"><div><label>Tipo</label><select id="hcat" onchange="fillH()"><option>Classe</option><option>Poder</option></select></div>
+<div><label>Item</label><select id="hsel" onchange="dsc()"></select></div></div>
+<p id="hd" style="color:var(--mut);font-size:13px;min-height:20px"></p>
+<button onclick="addH()">Adicionar</button>
+<h2 style="margin-top:14px">Personalizado</h2>
+<div class="g g2"><input id="hcn" placeholder="Nome"><input id="hcd" placeholder="Descrição"><button onclick="addC()">Adicionar</button></div>
+<div id="hl" style="margin-top:10px"></div>
+<p style="color:var(--mut);font-size:12px;margin:8px 0 0">Descrições resumidas: confira o texto exato no seu livro.</p></div>
+</div>
+<div id="t6" hidden><div class="card"><h2>Adicionar ritual</h2>
+<div class="g g2"><div><label>Ritual</label><select id="rsel" onchange="dsc('r')"></select></div></div>
+<p id="rd" style="color:var(--mut);font-size:13px;min-height:20px"></p>
+<button onclick="addH('r')">Adicionar</button>
+<h2 style="margin-top:14px">Personalizado</h2>
+<div class="g g2"><input id="rcn" placeholder="Nome"><input id="rcd" placeholder="Descrição"><button onclick="addC('r')">Adicionar</button></div>
+<div id="hlr" style="margin-top:10px"></div>
+<p style="color:var(--mut);font-size:12px;margin:8px 0 0">Descrições resumidas: confira o texto exato no seu livro.</p></div></div>
+<div id="t3" hidden>
+<div class="card"><h2>Ataques</h2><div id="atl"></div><p style="color:var(--mut);font-size:12px;margin:8px 0 0">As armas aparecem aqui quando você as adiciona em EQUIP. Se o d20 do ataque chegar à margem de crítico, o dano já sai multiplicado.</p></div>
+<div class="card"><h2>EQUIP. <small id="eqt" style="text-transform:none;letter-spacing:0;margin-left:6px"></small></h2><div id="eql"></div><button onclick="abrirPick()">+ Adicionar equipamento</button></div>
+</div>
+<div id="t4" hidden><div class="card"><h2>História</h2><textarea id="hist" rows="8" placeholder="A história do seu agente..."></textarea></div>
+<div class="card"><h2>Aparência</h2><textarea id="apar" rows="4" placeholder="Como o agente se parece..."></textarea></div>
+<div class="card"><h2>Objetivo</h2><textarea id="obj" rows="4" placeholder="O que o agente busca..."></textarea></div></div>
+<div id="t5" hidden>
+<div class="card"><h2>Inventário <small id="cg" style="text-transform:none;letter-spacing:0;margin-left:6px"></small></h2><input id="isq" placeholder="Buscar no inventário..." oninput="inl()" style="margin-bottom:8px"><div id="il"></div><button onclick="abrirInv()">+ Adicionar item</button><p style="color:var(--mut);font-size:12px;margin:8px 0 0">Itens do livro, sem armas e armaduras (essas ficam em EQUIP., na aba Ataques). Capacidade = 5 × Força (2 se Força 0); o peso dos equipamentos também entra na conta. Efeitos de acessórios (bônus de perícia, maldições) valem para os itens adicionados em EQUIP.</p></div>
+</div>
+<div class="card np"><h2>Salvar / Backup</h2>
+<p style="margin:0 0 8px;color:var(--mut);font-size:13px">A ficha é salva automaticamente neste navegador. Para levar para outro aparelho, use o backup abaixo.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px"><button onclick="exp()">Exportar</button><button class="s" onclick="expAll()">Exportar todas</button><button onclick="imp()">Importar</button></div>
+<label style="margin-top:6px">Importar de arquivo (.json ou .txt)</label><input type="file" accept=".json,.txt,text/plain" onchange="impFile(this.files[0])" style="margin-bottom:6px"><textarea id="bk" rows="3" placeholder="Cole aqui o backup para importar"></textarea></div>
+</main>
+<div id="dice" hidden onclick="if(event.target===this)this.hidden=true" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:50;background:#000c;padding:12px"><div style="position:relative;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px;max-width:100%;text-align:center"><button class="s" style="position:absolute;top:4px;right:4px;z-index:3;padding:2px 8px" onclick="$('dice').hidden=true">✕</button><div id="wrap3" style="position:relative;width:min(94vw,680px);height:min(52vh,380px);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#000"><canvas id="bgl" style="position:absolute;inset:0;width:100%;height:100%;display:none"></canvas><canvas id="bg2" style="position:absolute;inset:0;width:100%;height:100%"></canvas><canvas id="cv3" style="position:absolute;inset:0;width:100%;height:100%;display:none;touch-action:none"></canvas><div id="tray" style="position:relative;display:flex;gap:12px;flex-wrap:wrap;justify-content:center"></div><div id="fxt" style="position:absolute;left:0;right:0;top:6%;pointer-events:none"></div><div id="hint3" hidden style="position:absolute;left:0;right:0;bottom:8px;font-size:12px;color:#ddd;text-shadow:0 1px 3px #000;pointer-events:none">Arraste os dados e solte para lançar</div></div><div id="tres" style="margin-top:10px;font-size:14px"></div><button id="bthr" class="s" hidden style="margin-top:8px" onclick="D3.auto()">🎲 Lançar</button></div></div>
+<div id="pick" hidden onclick="if(event.target==this)this.hidden=true" style="position:fixed;inset:0;display:flex;align-items:flex-start;justify-content:center;z-index:48;background:#0009;padding:14px"><div class="card" style="max-width:420px;width:100%;margin:20px 0 0;max-height:86vh;display:flex;flex-direction:column"><h2 id="ptt">Adicionar equipamento</h2><input id="psq" placeholder="Buscar: katana, pistola, proteção..." oninput="pf()" style="margin-bottom:8px"><div id="pls" style="overflow:auto;flex:1"></div><button class="s" style="margin-top:8px" onclick="$('pick').hidden=true">Fechar</button></div></div>
+<div id="cfg" hidden onclick="if(event.target==this)this.hidden=true" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:48;background:#0008;padding:14px"><div class="card" style="max-width:360px;width:100%;margin:0"><h2>🎨 Aparência dos dados</h2>
+<label>Elemento (efeitos no fundo e nos dados)</label><select id="vc_el" onchange="elem(this.value)"><option>Sangue</option><option>Morte</option><option>Conhecimento</option><option>Medo</option><option>Nenhum</option></select>
+<div class="g g2" style="margin-top:8px"><div><label>Cor da mesa (fundo)</label><input type="color" id="vc_mesa" oninput="vis()"></div><div><label>Cor dos dados</label><input type="color" id="vc_dado" oninput="vis()"></div><div><label>Cor dos números</label><input type="color" id="vc_num" oninput="vis()"></div><div><label>Cor da aura</label><input type="color" id="vc_aura" oninput="vis()"></div></div>
+<label style="margin-top:8px">Estilo do dado</label><select id="vc_est" onchange="vis()"><option value="cristal">Cristal (com núcleo)</option><option value="solido">Sólido</option></select>
+<label style="margin-top:8px;display:flex;gap:6px;align-items:center"><input type="checkbox" id="vc_fx" onchange="vis()" style="width:auto">Efeitos de elemento, aura e 20 natural</label>
+<label style="margin-top:8px;display:flex;gap:6px;align-items:center"><input type="checkbox" id="vc_man" onchange="vis()" style="width:auto">Lançar os dados arrastando e soltando</label>
+<label style="margin-top:8px">Cores prontas</label><div id="vc_pre" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px"><button onclick="rollDemo(0)">Testar</button><button class="s" onclick="rollDemo(20)">Testar 20 natural</button><button class="s" onclick="rollDemo(1)">Testar 1 natural</button><button class="s" onclick="$('cfg').hidden=true">Fechar</button></div></div></div>
+<div id="crop" hidden style="position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:14px"><div class="card" style="max-width:320px;width:100%;margin:0"><h2>Recortar imagem</h2><canvas id="cv" width="280" height="280" style="width:100%;max-width:280px;aspect-ratio:1;touch-action:none;border-radius:8px;background:#000;cursor:grab;display:block;margin:auto"></canvas><label style="margin-top:8px">Proporção</label><select id="rt" onchange="setR()"><option>1:1</option><option>4:3</option><option>3:4</option><option>3:2</option><option>2:3</option><option>16:9</option><option>9:16</option></select><label style="margin-top:8px">Zoom</label><input type="range" id="zm" min="1" max="4" step="0.01" value="1" style="padding:0" oninput="zmv()"><p style="font-size:12px;color:var(--mut);margin:6px 0">Arraste a imagem para escolher a parte que aparece.</p><div style="display:flex;gap:8px"><button onclick="cropOk()">Usar recorte</button><button class="s" onclick="cropNo()">Cancelar</button></div></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const AT=[["agi","Agilidade"],["for","Força"],["int","Intelecto"],["pre","Presença"],["vig","Vigor"]];
+const PER=[["Acrobacia","agi"],["Adestramento","pre"],["Artes","pre"],["Atletismo","for"],["Atualidades","int"],["Ciências","int"],["Crime","agi"],["Diplomacia","pre"],["Enganação","pre"],["Fortitude","vig"],["Furtividade","agi"],["Iniciativa","agi"],["Intimidação","pre"],["Intuição","pre"],["Investigação","int"],["Luta","for"],["Medicina","int"],["Ocultismo","int"],["Percepção","pre"],["Pilotagem","agi"],["Pontaria","agi"],["Profissão","int"],["Reflexos","agi"],["Religião","pre"],["Sobrevivência","int"],["Tática","int"],["Tecnologia","int"],["Vontade","pre"]];
+const TR=[["Destreinado",0],["Treinado",5],["Veterano",10],["Expert",15]];
+const CL={Mundano:{pv:[8,0],pe:[1,0],sa:[8,0]},Combatente:{pv:[20,4],pe:[2,2],sa:[12,3]},Especialista:{pv:[16,3],pe:[3,3],sa:[16,4]},Ocultista:{pv:[12,2],pe:[4,4],sa:[20,5]}};
+const CAMPOS=["nome","idade","prof","prof2","resx","apar","obj","origem2","classe2","trilha2","nex2","og1","og2","jog","origem","classe","trilha","cl1","cl2","nex","bdef","odef","desl","hist"];
+let S={att:{agi:1,for:1,int:1,pre:1,vig:1},per:{},hab:[],atq:[],qd:{},inv:[],foto:"",bm:{pv:0,pe:0,sa:0},cur:{pv:null,pe:null,sa:null}};
+const NEXS=[0];for(let i=5;i<=95;i+=5)NEXS.push(i);NEXS.push(99);
+$("nex").innerHTML=NEXS.map(n=>`<option value="${n}">${n}%</option>`).join("")+'<option value="outro">Outro</option>';$("nex").value=5;
+$("atts").innerHTML=AT.map(([k,n])=>`<div class="att"><label>${n} <small id="ae_${k}" style="color:var(--ac)"></small></label><input type="number" min="0" id="a_${k}"><div style="display:flex;gap:4px;margin-top:4px"><input id="aq_${k}" type="number" min="0" title="Quantidade de dados (vazio = valor do atributo)" style="flex:1;min-width:0;font-size:12px;font-weight:400;padding:3px"><button class="s" style="padding:3px 7px" title="Rolar ${n}" onclick="rollA('${k}')">🎲</button></div></div>`).join("");
+const PROF=["Advogado","Arquiteto","Artesão","Bombeiro","Comerciante","Contador","Cozinheiro","Eletricista","Enfermeiro","Engenheiro","Fotógrafo","Jornalista","Mecânico","Médico","Motorista","Músico","Pesquisador","Piloto","Policial","Professor","Programador","Psicólogo","Segurança","Soldado","Outra"];
+$("skills").innerHTML=PER.map(([n,a],i)=>[n,a,i]).sort((x,y)=>x[0].localeCompare(y[0],"pt")).map(([n,a,i])=>`<div class="sk" id="r${i}"><span>${n} <small>(${a.toUpperCase()})</small><small id="kt${i}"></small><span id="ib${i}" class="ibx" hidden></span>${n=="Profissão"?`<br><select id="prof" style="padding:2px;margin-top:3px;width:auto;max-width:150px;font-size:12px"><option value="">— escolher —</option>${PROF.map(x=>`<option>${x}</option>`).join("")}</select><input id="prof2" placeholder="Qual profissão?" hidden style="padding:2px 6px;margin-top:3px;width:150px;font-size:12px">`:""}</span><select id="p${i}">${TR.map(([t,v])=>`<option value="${v}">${t}</option>`).join("")}</select><b id="b${i}"></b><input id="q${i}" type="number" style="padding:3px" title="Qtd. de dados d20 (vazio = atributo)"><button class="s" onclick="rolar(${i})">🎲</button></div>`).join("");
+function niv(){const n=NX();return n==99?20:Math.round(n/5)}
+function calc(){if($("classe").value=="Outro")return{pv:S.bm.pv,pe:S.bm.pe,sa:S.bm.sa};
+ const c=CL[$("classe").value],L=Math.max(1,niv()),v=ea("vig"),p=S.att.pre;
+ return{pv:c.pv[0]+v+(L-1)*(c.pv[1]+v)+S.bm.pv+EQB("pv"),pe:c.pe[0]+p+(L-1)*(c.pe[1]+p)+S.bm.pe+EQB("pe"),sa:c.sa[0]+(L-1)*c.sa[1]+S.bm.sa}}
+function bars(){const m=calc(),nm={pv:"PV",pe:"PE",sa:"SAN"},cl={pv:"",pe:"pe",sa:"sa"};
+ if(!$("cur_pv"))$("bars").innerHTML=["pv","pe","sa"].map(k=>`<div class="bar ${cl[k]}"><b>${nm[k]}</b><button class="s" onclick="aj('${k}',-1)">−</button><span><i id="f_${k}"></i><u id="o_${k}"></u></span><button class="s" onclick="aj('${k}',1)">+</button><input id="cur_${k}" type="number" style="width:64px;padding:3px 6px" oninput="sc('${k}',this.value)"><em id="m_${k}" style="min-width:84px"></em></div>`).join("");
+ for(const k of["pv","pe","sa"]){if(S.cur[k]===null)S.cur[k]=m[k];
+  const c=S.cur[k],ex=Math.max(0,c-m[k]);$("f_"+k).style.width=(m[k]>0?Math.max(0,Math.min(100,(ex>0?m[k]/c:c/m[k])*100)):0)+"%";$("o_"+k).style.width=(ex>0?ex/c*100:0)+"%";$("m_"+k).textContent="/ "+m[k]+(ex>0?" (+"+ex+")":"");
+  if(document.activeElement!==$("cur_"+k))$("cur_"+k).value=S.cur[k]}}
+function sc(k,v){S.cur[k]=v===""?0:+v;bars();salvar()}
+function apt(){const n=NX(),b=[20,50,80,95].filter(x=>n>=x).length,tot=(n==0?3:4)+b,rest=tot-(AT.reduce((t,[k])=>t+S.att[k],0)-5);
+ $("apts").innerHTML=`· NEX 0%: 3 pts · NEX 5%: 4 pts · <b>restam ${rest}</b> de ${tot}`}
+function aj(k,d){const m=calc();S.cur[k]=Math.max(0,Math.min(m[k],S.cur[k]+d));bars();$("cur_"+k).value=S.cur[k];salvar()}
+function upd(){
+ orig();cls();hl();profU();outU();
+ for(const[k]of AT)S.att[k]=Math.max(0,+$("a_"+k).value||0);
+ PER.forEach(([n,a],i)=>{S.per[i]=+$("p"+i).value;const og=grant().includes(n);S.qd[i]=$("q"+i).value;$("q"+i).placeholder=ea(a);$("b"+i).textContent=sg(ef(i))+(og?"★":"")});
+ $("bdef").value=(S.eq||[]).reduce((a,e)=>a+(e.uso===0?0:(+e.be||0)+MS(e,"df")),0);$("eqt").textContent="· +"+$("bdef").value+" na Defesa"+((S.eq||[]).filter(e=>e.ak=="ve"&&e.uso!==0).length>2?" · ⚠ máx. 2 vestimentas em uso":"");const dfs=10+ea("agi")+(+$("bdef").value||0)+(+$("odef").value||0)+cdef(),rf=efb(ix("Reflexos")),ft=ef(ix("Fortitude"));$("defesa").value=dfs;$("esq").value=dfs+rf;$("blq").value=ft>0?ft+ebx("Fortitude").v:"—";RT.forEach((_,i)=>S.res[i]=$("rs"+i).value);cmsg();for(const k of["pv","pe","sa"])S.bm[k]=+$("bm_"+k).value||0;cg();apt();alt();kts();
+ bars();
+}
+function rolar(i){const[n,a]=PER[i],at=ea(a),b=efb(i),ov=$("q"+i).value,cdl=cmod(a,n,0),nn=(ov===""?at:+ov)+cdl,q=Math.min(30,nn>0?nn:2),fin=Array.from({length:q},()=>d6(20)),pick=nn>0?Math.max(...fin):Math.min(...fin);
+ mostrar(fin,fin.indexOf(pick),pick,()=>res(`<b>${n}</b>: ${q}d20${cdl?` (cond. ${cdl}d20)`:""} [${fin.join(", ")}] → ${nn>0?"maior":"menor"} <b>${pick}</b> ${b<0?"−":"+"} ${Math.abs(b)} = <b style="font-size:20px">${pick+b}</b>${itemTag(n)}`+(pick==20?" 🔥 20 natural":pick==1?" 💀 1 natural":"")))}
+const ORI={
+"Acadêmico":[["Ciências","Investigação"],"Saber é Poder","Gasta PE para usar Intelecto em um teste de perícia no lugar do atributo original."],
+"Agente de Saúde":[["Intuição","Medicina"],"Técnica Medicinal","Soma seu Intelecto à cura de PV ao usar Medicina ou itens de cura."],
+"Amnésico":[[],"Vislumbres do Passado","Perícias e detalhes do passado definidos pelo mestre; memórias voltam aos poucos."],
+"Artista":[["Artes","Enganação"],"Magnum Opus","Você é conhecido pela sua arte, o que abre portas e rende bônus sociais."],
+"Atleta":[["Acrobacia","Atletismo"],"110%","Gasta PE para ganhar bônus em testes de Acrobacia ou Atletismo."],
+"Chef":[["Fortitude","Profissão"],"Ingrediente Secreto","Prepara refeições que dão bônus temporários ao grupo."],
+"Criminoso":[["Crime","Furtividade"],"O Crime Compensa","Consegue itens e recursos extras por meio de contatos e golpes."],
+"Cultista Arrependido":[["Ocultismo","Religião"],"Traços do Outro Lado","Recebe um poder paranormal, com as marcas que isso deixa."],
+"Desgarrado":[["Fortitude","Sobrevivência"],"Calejado","Vida dura: ganha PV extra conforme evolui."],
+"Engenheiro":[["Profissão","Tecnologia"],"Ferramenta Favorita","Um item seu é melhorado além da categoria normal."],
+"Executivo":[["Diplomacia","Profissão"],"Processo Otimizado","Aproveita melhor o tempo de interlúdio e tarefas de rotina."],
+"Investigador":[["Investigação","Percepção"],"Faro para Pistas","Bônus ao procurar e interpretar pistas."],
+"Lutador":[["Luta","Reflexos"],"Mão Pesada","Bônus de dano em ataques corpo a corpo."],
+"Magnata":[["Diplomacia","Pilotagem"],"Patrocinador da Ordem","Limite de crédito e acesso a recursos maiores."],
+"Mercenário":[["Iniciativa","Intimidação"],"Posição de Combate","Vantagem ao entrar em combate ou se posicionar."],
+"Militar":[["Pontaria","Tática"],"Para Bellum","Treinamento militar: bônus em situações de combate."],
+"Operário":[["Fortitude","Profissão"],"Ferramenta de Trabalho","Usa a ferramenta do ofício de forma eficaz, inclusive como arma."],
+"Policial":[["Percepção","Pontaria"],"Patrulha","Bônus defensivo e de atenção durante a ação."],
+"Religioso":[["Religião","Vontade"],"Acalentar","Ajuda aliados a recuperar a sanidade com palavras de conforto."],
+"Servidor Público":[["Intuição","Vontade"],"Espírito Cívico","Ajuda aliados em testes com seu apoio."],
+"Teórico da Conspiração":[["Investigação","Ocultismo"],"Eu Já Sabia","Já esperava o pior: resiste melhor a choques do paranormal."],
+"T.I.":[["Investigação","Tecnologia"],"Motor de Busca","Pesquisas com Tecnologia rendem informações extras."],
+"Trabalhador Rural":[["Adestramento","Sobrevivência"],"Desbravador","Bônus em terrenos difíceis e ao lidar com a natureza."],
+"Trambiqueiro":[["Crime","Enganação"],"Impostor","Se passa por outra pessoa com facilidade."],
+"Universitário":[["Atualidades","Investigação"],"Dedicação","Bônus em perícias de estudo e pesquisa."],
+"Vítima":[["Reflexos","Vontade"],"Cicatrizes Psicológicas","Sobreviveu ao trauma: mais resistência mental."]};
+const HAB=[
+["Classe","Ataque Especial (Combatente)","Gasta PE para bônus no ataque ou no dano."],
+["Classe","Eclético (Especialista)","Gasta PE para agir como treinado numa perícia."],
+["Classe","Perito (Especialista)","Gasta PE para somar um bônus extra em perícia treinada."],
+["Classe","Ataque Furtivo (Especialista)","Dano extra contra alvo desprevenido ou flanqueado."],
+["Classe","Escolhido pelo Outro Lado (Ocultista)","Permite conjurar rituais e aprender novos."],
+["Poder","Ataque Poderoso","Gasta PE por dano extra em ataque corpo a corpo."],
+["Poder","Combate Defensivo","Troca precisão do ataque por mais Defesa."],
+["Poder","Saque Rápido","Saca ou guarda arma com mais agilidade."],
+["Poder","Tiro Certeiro","Melhora seus ataques à distância."],
+["Poder","Sentido Tático","Percebe e reage melhor ao ambiente em combate."],
+["Poder","Vontade Inabalável","Resiste melhor a efeitos mentais."],
+["Ritual","Amaldiçoar Arma (Sangue, 1º)","Imbui uma arma com o elemento."],
+["Ritual","Cicatrização (Sangue, 1º)","Cura ferimentos de um alvo."],
+["Ritual","Descarnar (Sangue, 1º)","Ataque paranormal que causa dano."],
+["Ritual","Distorcer Aparência (Sangue, 1º)","Altera a aparência de um alvo."],
+["Ritual","Compreensão Paranormal (Conhecimento, 1º)","Ajuda a entender o que é paranormal."],
+["Ritual","Detecção de Ameaças (Conhecimento, 1º)","Percebe ameaças por perto."],
+["Ritual","Enfeitiçar (Conhecimento, 1º)","Torna um alvo mais receptivo a você."],
+["Ritual","Ouvir os Sussurros (Conhecimento, 1º)","Capta informações vindas do Outro Lado."],
+["Ritual","Decadência (Morte, 1º)","Causa dano com energia de Morte."],
+["Ritual","Definhar (Morte, 1º)","Enfraquece o alvo."],
+["Ritual","Coincidência Forçada (Energia, 1º)","Manipula pequenas coincidências a seu favor."],
+["Ritual","Luz (Energia, 1º)","Cria iluminação paranormal."],
+["Ritual","Amaldiçoar Tecnologia (Energia, 1º)","Imbui um item tecnológico."]];
+const esc=t=>String(t).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const ef=i=>Math.max(+$("p"+i).value,grant().includes(PER[i][0])?5:0);
+$("origem").innerHTML='<option value="">— escolha —</option>'+Object.keys(ORI).map(n=>`<option>${n}</option>`).join("")+"<option>Outro</option>";
+function orig(){const o=ORI[$("origem").value];
+ $("obox").innerHTML=o?`<b>${o[1]}</b>: ${o[2]}<br>Perícias treinadas (★): ${o[0].length?o[0].join(", "):"definidas pelo mestre"}`:($("origem").value=="Outro"?"Origem personalizada: escolha abaixo as perícias treinadas (★).":"Escolha uma origem para receber perícias treinadas e um poder.");
+ $("opw").innerHTML=o?`<b>${$("origem").value}: ${o[1]}</b><br><small>${o[2]}</small>`:"<small>Nenhuma origem escolhida.</small>"}
+function tab(n){CUR=n;[1,2,3,4,5,6].forEach(k=>{$("t"+k).hidden=k!=n;$("tb"+k).className=k==n?"":"s"})}
+function fillH(p="h"){const c=p=="r"?"Ritual":$("hcat").value;$(p+"sel").innerHTML=HAB.filter(h=>h[0]==c).map(h=>`<option>${h[1]}</option>`).join("");dsc(p)}
+function dsc(p="h"){const c=p=="r"?"Ritual":$("hcat").value,h=HAB.find(h=>h[0]==c&&h[1]==$(p+"sel").value);$(p+"d").textContent=h?h[2]:""}
+function addH(p="h"){const c=p=="r"?"Ritual":$("hcat").value,h=HAB.find(h=>h[0]==c&&h[1]==$(p+"sel").value);if(!h||S.hab.some(x=>x[1]==h[1]))return;S.hab.push(h);hl();salvar()}
+function addC(p="h"){const n=$(p+"cn").value.trim();if(!n)return;S.hab.push([p=="r"?"Ritual":"Personalizado",n,$(p+"cd").value.trim()]);$(p+"cn").value=$(p+"cd").value="";hl();salvar()}
+function rm(i){S.hab.splice(i,1);hl();salvar()}
+function hl(){const L=r=>S.hab.map((h,i)=>[h,i]).filter(([h])=>(h[0]=="Ritual")==r).map(([h,i])=>`<div class="hi"><span><b>${esc(h[1])}</b> <small>· ${h[0]}</small><br><small>${esc(h[2])}</small></span><button class="s" onclick="rm(${i})">✕</button></div>`).join("")||"<small>Nada adicionado ainda.</small>";$("hl").innerHTML=L(false);$("hlr").innerHTML=L(true)}
+fillH();fillH("r");
+const ix=n=>PER.findIndex(p=>p[0]==n);
+const TRL={Mundano:{},Outro:{},Combatente:{"Aniquilador":["A Favorita","Técnica Secreta","Técnica Sublime","Máquina de Matar"],"Comandante de Campo":["Inspirar Confiança","Estrategista","Brecha na Guarda","Oficial Comandante"],"Guerreiro":["Técnica Letal","Revidar","Força Opressora","Potência Máxima"],"Operações Especiais":["Iniciativa Aprimorada","Ataque Extra","Surto de Adrenalina","Sempre Alerta"],"Tropa de Choque":["Casca Grossa","Cai Dentro","Duro de Matar","Inquebrável"]},
+Especialista:{"Atirador de Elite":["Mira de Elite","Disparo Letal","Disparo Impactante","Atirar para Matar"],"Infiltrador":["Ataque Furtivo","Gatuno","Assassinar","Sombra Fugaz"],"Médico de Campo":["Paramédico","Equipe de Trauma","Resgate","Reanimação"],"Negociador":["Eloquência","Discurso Motivador","Eu Conheço um Cara","Truque de Mestre"],"Técnico":["Inventário Otimizado","Remendão","Improvisar","Preparado para Tudo"]},
+Ocultista:{"Conduíte":["Ampliar Ritual","Acelerar Ritual","Anular Ritual","Canalizar o Medo"],"Flagelador":["Poder do Flagelo","Abraçar a Dor","Absorver Agonia","Medo Tangível"],"Graduado":["Saber Ampliado","Grimório Ritualístico","Rituais Eficientes","Conhecendo o Medo"],"Intuitivo":["Mente Sã","Presença Poderosa","Inabalável","Presença Excepcional"],"Lâmina Paranormal":["Lâmina Maldita","Gladiador Paranormal","Conjuração Marcial","Lâmina do Medo"]}};
+const CLS={Outro:{n:0,t:"Classe personalizada: escolha as perícias treinadas à mão e defina PV, PE e SAN pelo Ajuste máx.",h:[]},Mundano:{n:1,t:"Sem treino especial: {n} perícias à sua escolha (limite de 1 PE por uso).",h:[["Empenho","Sem treinamento especial, mas compensa com dedicação e esforço."]]},Combatente:{n:1,t:"Treina Luta ou Pontaria e Fortitude ou Reflexos (escolha acima), mais {n} perícias à sua escolha.",h:[["Ataque Especial","Gasta PE para ganhar bônus no ataque ou no dano."]]},
+Especialista:{n:7,t:"Treina {n} perícias à sua escolha.",h:[["Eclético","Gasta PE para agir como treinado em uma perícia."],["Perito","Gasta PE para somar um bônus extra em perícia treinada."]]},
+Ocultista:{n:3,t:"Treina Ocultismo e Vontade, mais {n} perícias à sua escolha.",h:[["Escolhido pelo Outro Lado","Permite conjurar rituais e aprender novos."]]}};
+const grant=()=>{const o=ORI[$("origem").value],c=$("classe").value,g=o?[...o[0]]:$("origem").value=="Outro"?[$("og1").value,$("og2").value].filter(x=>x):[];if(c=="Ocultista")g.push("Ocultismo","Vontade");if(c=="Combatente")g.push($("cl1").value,$("cl2").value);return g};
+let lastG=[];
+function syncG(){const n=grant();lastG.filter(x=>!n.includes(x)).forEach(x=>{const i=ix(x);if(i>=0&&+$("p"+i).value==5)$("p"+i).value=0});n.forEach(x=>{const i=ix(x);if(i>=0&&+$("p"+i).value<5)$("p"+i).value=5});lastG=n}
+function fillT(v){$("trilha").innerHTML=`<option value="">— ${$("classe").value=="Mundano"?"sem trilha":"escolha"} —</option>`+Object.keys(TRL[$("classe").value]).map(t=>`<option>${t}</option>`).join("")+"<option>Outro</option>";if(v)$("trilha").value=v}
+function cls(){const c=$("classe").value,k=CLS[c],hr="<hr style='border:0;border-top:1px solid var(--bd)'>",tr=$("trilha").value,nex=NX();$("ch").hidden=$("ch2").hidden=c!="Combatente";
+ $("cbx").innerHTML=`<b>${c}</b>: ${k.t.replace("{n}",k.n+(+$("a_int").value||0))}${k.h.length?` Habilidade: ${k.h.map(h=>h[0]).join(", ")}.`:""}`;
+ $("cab").innerHTML=k.h.map(h=>`<b>${h[0]}</b><br><small>${h[1]}</small>`).join(hr)+(tr&&TRL[c][tr]?`${hr}<b>Trilha: ${esc(tr)}</b><br>${TRL[c][tr].map((x,j)=>{const nx=[10,40,65,99][j];return `<small style="${nex>=nx?"":"opacity:.45"}">${nex>=nx?"✔":"🔒"} NEX ${nx}% — <b>${x}</b>${TD[x]?`: ${TD[x]}`:""}</small>`}).join("<br>")}`:"")}
+const nz=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function fil(){const q=nz($("busca").value.trim());PER.forEach((p,i)=>$("r"+i).hidden=!nz(p[0]).includes(q))}
+fillT();
+const DS=[20,12,10,8,6,4,3,2];
+const ORD=["Luta","Pontaria","Ocultismo"].map(n=>PER.findIndex(p=>p[0]==n));
+const dsel=(v,i,k)=>`<select onchange="ua(${i},'${k}',this.value)">${DS.map(x=>`<option value="${x}"${x==v?" selected":""}>d${x}</option>`).join("")}</select>`;
+const num=(v,i,k,w,ph)=>`<input type="${ph?"text":"number"}" min="1" value="${esc(v)}" placeholder="${ph||""}" style="width:${w}px" oninput="ua(${i},'${k}',this.value)">`;
+const ET=["Arma branca","Arma de disparo","Arma de fogo","Outra arma","Proteção leve","Proteção pesada","Escudo","Acessório","Explosivo","Operacional","Paranormal","Amaldiçoado","Outro"],isW=t=>/arma/i.test(t);
+const CAT="Armas brancas|Faca|Arma branca|1|4|19|2|Corte|0|1|0|1|ágil · arremesso curto\nArmas brancas|Punhal|Arma branca|1|4|20|3|Perfuração|0|1|0|1|ágil\nArmas brancas|Martelo|Arma branca|1|6|20|2|Impacto|0|1|0|0|\nArmas brancas|Bastão|Arma branca|1|6|20|2|Impacto|0|1|0|0|1d8 com duas mãos\nArmas brancas|Machete|Arma branca|1|6|19|2|Corte|0|1|0|0|\nArmas brancas|Lança|Arma branca|1|6|20|2|Perfuração|0|1|0|0|arremesso curto\nArmas brancas|Cajado|Arma branca|1|6|20|2|Impacto|0|2|0|1|ágil · arma dupla 1d6/1d6\nArmas brancas|Machadinha|Arma branca|1|6|20|3|Corte|0|1|0|0|arremesso curto\nArmas brancas|Nunchaku|Arma branca|1|8|20|2|Impacto|0|1|0|1|ágil\nArmas brancas|Corrente|Arma branca|1|8|20|2|Impacto|0|1|0|0|+2 desarmar e derrubar\nArmas brancas|Espada|Arma branca|1|8|19|2|Corte|0|1|1|0|1d10 com duas mãos\nArmas brancas|Florete|Arma branca|1|6|18|2|Corte|0|1|1|1|ágil\nArmas brancas|Machado|Arma branca|1|8|20|3|Corte|0|1|1|0|\nArmas brancas|Maça|Arma branca|2|4|20|2|Impacto|0|1|1|0|\nArmas brancas|Acha|Arma branca|1|12|20|3|Corte|0|2|1|0|\nArmas brancas|Gadanho|Arma branca|2|4|20|4|Corte|0|2|1|0|\nArmas brancas|Katana|Arma branca|1|10|19|2|Corte|0|2|1|1|ágil · uma mão se veterano em Luta\nArmas brancas|Marreta|Arma branca|3|4|20|2|Impacto|0|2|1|0|\nArmas brancas|Montante|Arma branca|2|6|19|2|Corte|0|2|1|0|\nArmas brancas|Motosserra|Arma branca|3|6|20|2|Corte|0|2|1|0|dado 6 rola um extra\nArmas de disparo|Arco|Arma de disparo|1|6|20|3|Perfuração|0|2|0|0|alcance médio\nArmas de disparo|Besta|Arma de disparo|1|8|19|2|Perfuração|0|2|0|0|alcance médio\nArmas de disparo|Arco composto|Arma de disparo|1|10|20|3|Perfuração|0|2|1|0|soma Força no dano\nArmas de disparo|Balestra|Arma de disparo|1|12|19|2|Perfuração|0|2|1|0|alcance médio\nArmas de fogo|Pistola|Arma de fogo|1|12|18|2|Balístico|0|1|1|0|alcance curto\nArmas de fogo|Revólver|Arma de fogo|2|6|19|3|Balístico|0|1|1|0|alcance curto\nArmas de fogo|Fuzil de caça|Arma de fogo|2|8|19|3|Balístico|0|2|1|0|alcance médio\nArmas de fogo|Submetralhadora|Arma de fogo|2|6|19|3|Balístico|0|1|1|0|automática\nArmas de fogo|Espingarda|Arma de fogo|4|6|20|3|Balístico|0|2|1|0|metade do dano em alcance médio+\nArmas de fogo|Fuzil de assalto|Arma de fogo|2|10|19|3|Balístico|0|2|2|0|automática\nArmas de fogo|Fuzil de precisão|Arma de fogo|2|10|19|3|Balístico|0|2|3|0|alcance longo\nArmas de fogo|Metralhadora|Arma de fogo|2|12|19|3|Balístico|0|2|2|0|automática · Força 4 ou apoio\nArmas de fogo|Bazuca|Arma de fogo|10|8|20|2|Impacto|0|2|3|0|área de 3 m\nArmas de fogo|Lança-chamas|Arma de fogo|6|6|20|2|Fogo|0|2|3|0|linha de 1,5 m · em chamas\nProteção|Proteção leve|Proteção leve|0|0|0|0||5|2|1|0|\nProteção|Proteção pesada|Proteção pesada|0|0|0|0||10|5|2|0|RD 2 (balístico, corte, impacto, perfuração) · −5 de carga\nProteção|Escudo|Escudo|0|0|0|0||2|2|1|0|acumula com a proteção\nAcessórios|Kit de perícia|Acessório|0|0|0|0||0|1|0|0|sem o kit, −5 no teste (escolha a perícia)|kit|\nAcessórios|Utensílio|Acessório|0|0|0|0||0|1|1|0|+2 em uma perícia (exceto Luta e Pontaria); precisa ser empunhado|ut|\nAcessórios|Vestimenta|Acessório|0|0|0|0||0|1|1|0|+2 em uma perícia (exceto Luta e Pontaria); no máximo 2 em uso|ve|\nAcessórios|Smartphone|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: utensílio|ut|Ciências\nAcessórios|Notebook|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: utensílio|ut|Tecnologia\nAcessórios|Detector de mentiras portátil|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: utensílio (o mestre decide)|ut|Intuição\nAcessórios|Botas militares|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: vestimenta|ve|Atletismo\nAcessórios|Terno ou vestido elegante|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: vestimenta|ve|Diplomacia\nAcessórios|Manto com glifos|Acessório|0|0|0|0||0|1|1|0|exemplo do livro: vestimenta|ve|Ocultismo\nExplosivos|Granada de atordoamento|Explosivo|0|0|0|0||0|1|0|0|raio de 6 m: atordoa por 1 rodada (Fortitude reduz)\nExplosivos|Granada de fragmentação|Explosivo|8|6|20|2|Perfuração|0|1|1|0|raio de 6 m; Reflexos reduz à metade\nExplosivos|Granada de fumaça|Explosivo|0|0|0|0||0|1|0|0|raio de 6 m: cega e dá camuflagem total por 2 rodadas\nExplosivos|Granada incendiária|Explosivo|6|6|20|2|Fogo|0|1|1|0|raio de 6 m; deixa em chamas (Reflexos reduz)\nExplosivos|Mina antipessoal|Explosivo|12|6|20|2|Perfuração|0|1|1|0|cone de 6 m; detonação remota; Reflexos reduz à metade\nOperacionais|Algemas|Operacional|0|0|0|0||0|1|0|0|prende os pulsos: −5 em testes com as mãos; escapar: Acrobacia DT 30\nOperacionais|Arpéu|Operacional|0|0|0|0||0|1|0|0|Pontaria DT 15 para prender; +5 em Atletismo ao subir\nOperacionais|Bandoleira|Operacional|0|0|0|0||0|1|1|0|1×/rodada saca ou guarda um item como ação livre\nOperacionais|Binóculos|Operacional|0|0|0|0||0|1|0|0|+5 em Percepção para coisas distantes\nOperacionais|Bloqueador de sinal|Operacional|0|0|0|0||0|1|1|0|impede celulares de se conectar (alcance médio)\nOperacionais|Cicatrizante|Operacional|0|0|0|0||0|1|1|0|ação padrão: cura 2d8+2 PV (você ou adjacente)\nOperacionais|Corda|Operacional|0|0|0|0||0|1|0|0|10 m; +5 em Atletismo para descer e outros usos\nOperacionais|Equipamento de sobrevivência|Operacional|0|0|0|0||0|2|0|0|+5 em Sobrevivência (acampar e se orientar), mesmo sem treino\nOperacionais|Lanterna tática|Operacional|0|0|0|0||0|1|1|0|ilumina; ação de movimento ofusca um ser por 1 rodada\nOperacionais|Máscara de gás|Operacional|0|0|0|0||0|1|0|0|+10 em Fortitude contra efeitos de respiração\nOperacionais|Mochila militar|Operacional|0|0|0|0||0|0|1|0|não usa espaço e aumenta a carga em 2 espaços\nOperacionais|Óculos de visão térmica|Operacional|0|0|0|0||0|1|1|0|elimina a penalidade por camuflagem\nOperacionais|Pé de cabra|Operacional|0|0|0|0||0|1|0|0|+5 em Força para arrombar; serve como bastão\nOperacionais|Pistola de dardos|Operacional|0|0|0|0||0|1|1|0|sonífero: inconsciente até o fim da cena (Fortitude); 2 dardos\nOperacionais|Pistola sinalizadora|Operacional|2|6|20|2|Fogo|0|1|0|0|arma de disparo leve, alcance curto; 2 cargas\nOperacionais|Soqueira|Operacional|0|0|0|0||0|1|0|0|+1 no dano desarmado; aceita modificações e maldições de arma corpo a corpo\nOperacionais|Spray de pimenta|Operacional|0|0|0|0||0|1|1|0|cega por 1d4 rodadas (Fortitude evita); 2 usos\nOperacionais|Taser|Operacional|1|6|20|2|Eletricidade|0|1|1|0|atordoa por 1 rodada (Fortitude evita); 2 usos\nOperacionais|Traje hazmat|Operacional|0|0|0|0||0|2|1|0|+5 contra efeitos ambientais; RD químico 10\nParanormais|Amarras de (elemento)|Paranormal|0|0|0|0||0|1|2|0|armadilha 3×3 m ou laçar uma criatura vulnerável ao elemento\nParanormais|Câmera de aura paranormal|Paranormal|0|0|0|0||0|1|2|0|1 PE: a foto revela auras paranormais\nParanormais|Componentes ritualísticos de (elemento)|Paranormal|0|0|0|0||0|1|0|0|necessários para os rituais do elemento (não existe de Medo)\nParanormais|Emissor de pulsos paranormais|Paranormal|0|0|0|0||0|1|2|0|1 PE: atrai criaturas de um elemento e afasta as do oposto\nParanormais|Escuta de ruídos paranormais|Paranormal|0|0|0|0||0|1|2|0|2 PE: grava por 24 h; +5 em Ocultismo para identificar criatura\nParanormais|Medidor de estabilidade da Membrana|Paranormal|0|0|0|0||0|1|2|0|avalia a Membrana de um lugar (Ocultismo); categoria não consta na tabela, ajuste\nParanormais|Scanner de manifestação paranormal de (elemento)|Paranormal|0|0|0|0||0|1|2|0|1 PE/rodada: sente a direção das manifestações do elemento (alcance longo)\nAmaldiçoados · Sangue|Coração Pulsante|Amaldiçoado|0|0|0|0||0|1|2|0|reação: reduz um dano à metade; Fortitude DT 15 (+5 por uso extra) ou se destrói\nAmaldiçoados · Sangue|Coroa de Espinhos|Amaldiçoado|0|0|0|0||0|1|2|0|reação 1×/rodada: dano mental vira dano de Sangue; sem recuperar sanidade por descanso\nAmaldiçoados · Sangue|Frasco de Vitalidade|Amaldiçoado|0|0|0|0||0|1|2|0|guarda até 20 PV do seu sangue; beber devolve (Fortitude DT 20)\nAmaldiçoados · Sangue|Pérola de Sangue|Amaldiçoado|0|0|0|0||0|1|2|0|+5 em AGI, FOR e VIG até o fim da cena; depois Fortitude DT 20 (falha: fatigado)\nAmaldiçoados · Sangue|Punhos Enraivecidos|Outra arma|1|8|20|2|Sangue|0|1|2|0|desarmado causa 1d8 de Sangue; ataque extra a cada acerto por 2 PE crescente\nAmaldiçoados · Sangue|Seringa de Transfiguração|Amaldiçoado|0|0|0|0||0|1|2|0|injeta sangue alheio: aparência do dono por 1 dia\nAmaldiçoados · Morte|Amarras Mortais|Amaldiçoado|0|0|0|0||0|1|2|0|2 PE: agarrar alvo grande ou menor em alcance curto com +10\nAmaldiçoados · Morte|Casaco de Lodo|Amaldiçoado|0|0|0|0||0|1|2|0|vestimenta: RD 5 a corte, impacto, Morte e perfuração; vulnerável a balístico e Energia\nAmaldiçoados · Morte|Coletora|Amaldiçoado|0|0|0|0||0|1|2|0|punhal: mata quem está morrendo e guarda 1d8 PE (máx. 20); pesadelos\nAmaldiçoados · Morte|Crânio Espiral|Amaldiçoado|0|0|0|0||0|1|2|0|ação livre: ação padrão adicional; Vontade DT 15 (+5 por uso extra)\nAmaldiçoados · Morte|Frasco de Lodo|Amaldiçoado|0|0|0|0||0|1|2|0|ferida recente: cura 6d8+20; antiga: cura ou dá 3d8+10 de Morte; 1 uso\nAmaldiçoados · Morte|Vislumbre do Fim|Amaldiçoado|0|0|0|0||0|1|2|0|óculos: ação de movimento revela a pior resistência e as vulnerabilidades do alvo\nAmaldiçoados · Conhecimento|Anéis do Elo Mental|Amaldiçoado|0|0|0|0||0|1|2|0|par: ligação telepática após 24 h; dano mental é compartilhado\nAmaldiçoados · Conhecimento|Lanterna Reveladora|Amaldiçoado|0|0|0|0||0|1|2|0|1 PE: luz do ritual Terceiro Olho por uma cena; atrai criaturas de Sangue\nAmaldiçoados · Conhecimento|Máscara das Pessoas nas Sombras|Amaldiçoado|0|0|0|0||0|1|2|0|RD Conhecimento 10; 2 PE: teleporta entre sombras (alcance médio)\nAmaldiçoados · Conhecimento|Munição Jurada|Amaldiçoado|0|0|0|0||0|1|2|0|vinculada a um ser: +10 no ataque, margem dobrada, +6d12 de Conhecimento\nAmaldiçoados · Conhecimento|Pergaminho da Pertinácia|Amaldiçoado|0|0|0|0||0|1|2|0|ação padrão: 5 PE temporários na cena; Ocultismo DT 15 (+5 por uso extra)\nAmaldiçoados · Energia|Arcabuz dos Moretti|Arma de fogo|2|10|20|3|Balístico|0|1|2|0|+2 no ataque; sem munição; dano varia com 1d6: 2d4, 2d6, 2d8, 2d10, 2d12 ou 2d20\nAmaldiçoados · Energia|Bateria Reversa|Amaldiçoado|0|0|0|0||0|1|2|0|2 PE: drena a carga de um aparelho; cheia, recarrega outro ou explode (12d6)\nAmaldiçoados · Energia|Peitoral da Segunda Chance|Amaldiçoado|0|0|0|0||0|1|2|0|a 0 PV gasta 5 PE e reanima com 4d10 PV (1 em 1d10 de morrer)\nAmaldiçoados · Energia|Relógio de Arnaldo|Amaldiçoado|0|0|0|0||0|1|2|0|1 PE: rola de novo um dado que deu 1; item único\nAmaldiçoados · Energia|Talismã da Sorte|Amaldiçoado|0|0|0|0||0|1|2|0|reação + 3 PE: 1d4 evita o dano (2 a 4) ou dobra o dano (1)\nAmaldiçoados · Energia|Teclado de Conexão Neural|Amaldiçoado|0|0|0|0||0|1|2|0|+10 para hackear; sofre 1d6 de dano mental por rodada\nAmaldiçoados · Energia|Tela do Pesadelo|Amaldiçoado|0|0|0|0||0|1|2|0|2 PE: quem toca faz Vontade; falha: atordoado e 4d6 de dano mental\nAmaldiçoados · Energia|Veículo Energizado|Amaldiçoado|0|0|0|0||0|1|2|0|sem combustível; Pilotagem DT 25: o veículo atravessa objetos\nAmaldiçoados · Medo|Jaqueta de Veríssimo|Amaldiçoado|0|0|0|0||0|1|4|0|item único: RD paranormal 15; reação + 2 PE: toma o dano de um aliado adjacente\nAmaldiçoados · Variável|Dedo Decepado|Amaldiçoado|0|0|0|0||0|1|2|0|dá um poder paranormal; −10 em Diplomacia ao ser visto; vestir por 1 semana\nAmaldiçoados · Variável|Selos Paranormais|Amaldiçoado|0|0|0|0||0|1|1|0|guarda um ritual; categoria = círculo do ritual; se desfaz ao usar".split("\n").map(l=>{const a=l.split("|");return[a[0],a[1],a[2],+a[3],+a[4],+a[5],+a[6],a[7],+a[8],+a[9],+a[10],+a[11],a[12]||"",a[13]||"",a[14]||""]});
+const AMM=[["Munições","Balas curtas",0,1,"ex.: pistolas e revólveres (pacote)"],["Munições","Balas longas",1,1,"ex.: fuzis (pacote)"],["Munições","Cartuchos",1,1,"ex.: espingardas (pacote)"],["Munições","Combustível",1,1,"lança-chamas (pacote)"],["Munições","Flechas",0,1,"arcos e bestas (pacote)"],["Munições","Foguete",1,1,"bazuca"]];
+const IV=AMM.concat(CAT.filter(c=>!/arma|prote|escudo/i.test(c[2])).map(c=>[c[0],c[1],c[10],c[9],c[12],c[13],c[14]]));
+const CR=["0","I","II","III","IV"],catOf=e=>{const m=e.mods||[],c=m.filter(x=>x.cur).length;let n=(+e.ct||0)+m.filter(x=>!x.cur).length;if(c)n+=1+c;return CR[Math.min(4,n)]};
+const EP=e=>Math.max(0,(+e.pw||0)-MS(e,"pw"));
+const ek=a=>+(a.sk??ORD[/fogo|disparo/i.test(a.t)?1:0]);
+const mgOf=e=>{const m=(+e.cm||20)-MS(e,"m");return MS(e,"md")?21-2*(21-m):m};
+const dmgAttr=a=>{const t=a.t||"";if(/branca|Outra arma/i.test(t)||a.n=="Arco composto"){const k=a.ag?"agi":"for";return{n:k.toUpperCase(),v:ea(k)||0}}return{n:"",v:0}};
+function addCat(v){if(v==="")return;const c=CAT[+v];S.eq.push({n:c[1],t:c[2],pw:c[9],be:c[8],dq:c[3]||1,dd:c[4]||6,ds:"",cm:c[5]||20,cx:c[6]||2,tp:c[7]||"Corte",ct:c[10],ag:c[11],nt:c[12],ak:c[13],bp:c[14],uso:1,dm:(c[3]>0&&!/Arma/.test(c[2]))?1:0,mods:(FX[c[1]]||[]).map(x=>Object.assign({},x)),sk:ORD[/fogo|disparo/i.test(c[2])?1:0],aq:1,ad:20});atl();upd();salvar()}
+const SKL=PER.map(p=>p[0]).sort((a,b)=>a.localeCompare(b,"pt")),hm=(e,n)=>(e.mods||[]).some(x=>x.n==n),FX={"Arcabuz dos Moretti":[{n:"Arcabuz",a:2}],"Mochila militar":[{n:"Mochila",cg:2}]};
+const ebE=n=>{let b={v:0,src:""};(S.eq||[]).forEach(e=>{if(e.t!="Acessório"||e.uso===0||e.ak=="kit")return;if(e.bp==n){const v=hm(e,"Aprimorado")?5:2;if(v>b.v)b={v,src:e.n}}if(e.bp2==n&&hm(e,"Função adicional")&&b.v<2)b={v:2,src:e.n}});return b};
+const eb=n=>ebE(n).v;
+const sg=n=>(n>=0?"+":"")+n;
+const KITP=["Crime","Enganação","Medicina","Tecnologia"];
+const INVFX={"Arpéu":{p:"Atletismo",v:5},"Binóculos":{p:"Percepção",v:5},"Corda":{p:"Atletismo",v:5},"Equipamento de sobrevivência":{p:"Sobrevivência",v:5},"Máscara de gás":{p:"Fortitude",v:10},"Escuta de ruídos paranormais":{p:"Ocultismo",v:5},"Teclado de Conexão Neural":{p:"Tecnologia",v:10},"Pé de cabra":{a:"for",v:5}};
+const ibP=it=>it.fx&&!it.fx.kit&&!it.fx.a?(it.bp||it.fx.p||""):"";
+const ebI=n=>{let b={v:0,src:""};(S.inv||[]).forEach(it=>{if(it.on&&ibP(it)==n&&it.fx.v>b.v)b={v:it.fx.v,src:it.n}});return b};
+const ebx=n=>{const a=ebE(n),b=ebI(n);return b.v>a.v?b:a};
+const ebA=k=>{let m=0;(S.inv||[]).forEach(it=>{if(it.on&&it.fx&&it.fx.a==k)m=Math.max(m,it.fx.v)});return m};
+const kitHas=n=>(S.inv||[]).some(it=>it.fx&&it.fx.kit&&it.bp==n),kitOn=n=>(S.inv||[]).some(it=>it.fx&&it.fx.kit&&it.bp==n&&it.on);
+const kitPen=n=>KITP.includes(n)&&kitHas(n)&&!kitOn(n)?5:0;
+const efb=i=>ef(i)+ebx(PER[i][0]).v-kitPen(PER[i][0]);
+const itemTag=n=>{const x=ebx(n);return(x.v?` <small>(${esc(x.src)} +${x.v})</small>`:"")+(kitPen(n)?" <small>(sem kit −5)</small>":"")+(kitOn(n)?" <small>(kit ✔)</small>":"")};
+function alt(){const a=(S.inv||[]).filter(it=>it.on&&it.fx),q=(S.eq||[]).filter(e=>e.t=="Acessório"&&e.uso!==0&&e.ak!="kit"&&(e.bp||e.bp2)),e=$("alt");e.hidden=!(a.length||q.length);if(e.hidden)return;
+ const L=a.map(it=>esc(it.n)+(it.fx.kit?` (kit de ${esc(it.bp||"?")})`:it.fx.a?` (+${it.fx.v} ${it.fx.a.toUpperCase()})`:` (+${it.fx.v} ${esc(ibP(it)||"?")})`)).concat(q.map(x=>esc(x.n)+` (+${hm(x,"Aprimorado")?5:2} ${esc(x.bp||x.bp2)})`));
+ e.innerHTML=`<b>⚠ Itens ativos:</b> ${L.join(", ")} <small style="color:var(--mut)">— desative quando não estiver usando.</small> <button class="s" onclick="offAll()" style="margin-left:6px">Desativar todos</button>`}
+function offAll(){S.inv.forEach(it=>it.on=0);(S.eq||[]).forEach(e=>{if(e.t=="Acessório")e.uso=0});inl();atl();upd();salvar()}
+function kts(){PER.forEach((q,i)=>{const n=q[0],e=$("kt"+i),b=$("ib"+i);if(!e)return;e.textContent=KITP.includes(n)?(kitHas(n)?(kitOn(n)?" 🧰✔":" 🧰 −5"):" 🧰"):"";const x=ebx(n),t=[];if(x.v)t.push("+"+x.v+" "+x.src);if(kitPen(n))t.push("−5 sem kit");b.hidden=!t.length;b.textContent=t.join(" · ");b.title="Bônus de itens ativos — não é treinamento"})}
+const fxUI=(it,i)=>{const f=it.fx,ps=f.kit?KITP:SKL.filter(n=>n!="Luta"&&n!="Pontaria"),lab=f.kit?"Kit para":f.a?`+${f.v} em testes de ${f.a.toUpperCase()}`:f.ch?`+${f.v} em`:`+${f.v} em ${esc(f.p)}`;
+ return `<small>${lab}</small>${(f.kit||f.ch)?`<select onchange="ui(${i},'bp',this.value)"><option value="">Perícia…</option>${ps.map(n=>`<option${n==it.bp?" selected":""}>${n}</option>`).join("")}</select>`:""}<label style="margin:0;font-size:12px;display:flex;gap:3px;align-items:center"><input type="checkbox" ${it.on?"checked":""} onchange="ui(${i},'on',this.checked?1:0)" style="width:auto">${f.kit?"Com o kit":"Ativo"}</label>`};
+const fxTxt=c=>{const f=INVFX[c[1]];return f?(f.a?"+"+f.v+" em testes de "+f.a.toUpperCase():"+"+f.v+" "+f.p):c[5]=="kit"?"escolha a perícia (kit)":c[5]?"+2 em uma perícia":""};
+const EAB=k=>(S.eq||[]).reduce((a,e)=>a+(e.uso===0?0:MS(e,"at_"+k)),0),ea=k=>(S.att[k]||0)+EAB(k);
+const EQB=k=>(S.eq||[]).reduce((a,e)=>a+(e.uso===0||(!e.d1&&(k=="pv"||k=="pe"))?0:MS(e,k)),0);
+const accUI=(e,i)=>e.t!="Acessório"?"":`<select onchange="ua(${i},'bp',this.value)" title="${e.ak=="kit"?"Perícia do kit":"Perícia do bônus"}"><option value="">Perícia…</option>${SKL.map(n=>`<option${n==e.bp?" selected":""}>${n}</option>`).join("")}</select>${e.ak!="kit"?`<small>+${hm(e,"Aprimorado")?5:2}</small>`:""}${hm(e,"Função adicional")?`<select onchange="ua(${i},'bp2',this.value)" title="Segunda perícia (+2)"><option value="">2ª perícia…</option>${SKL.map(n=>`<option${n==e.bp2?" selected":""}>${n}</option>`).join("")}</select><small>+2</small>`:""}<label style="margin:0;font-size:12px;display:flex;gap:3px;align-items:center"><input type="checkbox" ${e.uso!==0?"checked":""} onchange="ua(${i},'uso',this.checked?1:0)" style="width:auto">Em uso</label>${(MS(e,"pv")||MS(e,"pe"))?`<label style="margin:0;font-size:12px;display:flex;gap:3px;align-items:center"><input type="checkbox" ${e.d1?"checked":""} onchange="ua(${i},'d1',this.checked?1:0)" style="width:auto">1 dia de uso</label>`:""}`;
+const MODS=[["Aprimoramentos (arma)","Certeira","+2 nos testes de ataque.","m",{a:2}],["Aprimoramentos (arma)","Cruel","+2 nas rolagens de dano.","m",{d:2}],["Aprimoramentos (arma)","Perigosa","+2 na margem de ameaça.","m",{m:2}],["Aprimoramentos (arma)","Discreta","+5 em Crime para ocultar a arma e −1 espaço.","w",{oc:5,pw:1}],["Aprimoramentos (arma)","Tática","Saca a arma como ação livre.","w",{}],
+["Aprimoramentos (arma de fogo)","Alongada","+2 nos testes de ataque.","f",{a:2}],["Aprimoramentos (arma de fogo)","Calibre Grosso","+1 dado de dano do mesmo tipo (munição própria).","f",{dx:1}],["Aprimoramentos (arma de fogo)","Compensador","Só automáticas: anula a penalidade da rajada.","f",{}],["Aprimoramentos (arma de fogo)","Ferrolho Automático","A arma passa a ser automática.","f",{}],["Aprimoramentos (arma de fogo)","Mira Laser","+2 na margem de ameaça.","f",{m:2}],["Aprimoramentos (arma de fogo)","Mira Telescópica","Alcance sobe uma categoria; Ataque Furtivo vale em qualquer alcance.","f",{}],["Aprimoramentos (arma de fogo)","Silenciador","Reduz a penalidade de Furtividade depois de atacar.","f",{}],["Aprimoramentos (arma de fogo)","Visão de Calor","Ignora camuflagem do alvo.","f",{}],
+["Munição (arma de fogo)","Munição Dum Dum","+1 no multiplicador de crítico.","f",{x:1}],["Munição (arma de fogo)","Munição Explosiva","+2d6 de dano (não multiplica no crítico).","f",{xd:2,xs:6,el:"Explosivo",nm:1}],
+["Aprimoramentos (proteção)","Antibombas","+5 em resistência contra efeitos de área.","ph",{}],["Aprimoramentos (proteção)","Blindada","RD 5 e +1 espaço.","ph",{pw:-1}],["Aprimoramentos (proteção)","Discreta","−1 espaço e +5 em Crime para ocultar.","pl",{oc:5,pw:1}],["Aprimoramentos (proteção)","Reforçada","+2 na Defesa e +1 espaço.","p",{df:2,pw:-1}],
+["Maldições (arma) · Conhecimento","Antielemento","2 PE: +4d8 de dano contra criaturas de um elemento.","w",{elm:"Conhecimento",cur:1}],["Maldições (arma) · Conhecimento","Ritualística","Guarda um ritual e o libera ao acertar.","w",{elm:"Conhecimento",cur:1}],["Maldições (arma) · Conhecimento","Senciente","2 PE: a arma flutua e ataca sozinha 1×/rodada.","w",{elm:"Conhecimento",cur:1}],
+["Maldições (arma) · Energia","Empuxo","Só corpo a corpo: pode ser arremessada, +1 dado, e volta.","m",{elm:"Energia",cur:1}],["Maldições (arma) · Energia","Energética","2 PE: +5 no ataque, ignora RD, dano de Energia.","w",{elm:"Energia",cur:1}],["Maldições (arma) · Energia","Vibrante","Concede Ataque Extra ou reduz o custo em 1 PE.","w",{elm:"Energia",cur:1}],
+["Maldições (arma) · Morte","Consumidora","2 PE: o alvo atingido fica imóvel por uma rodada.","w",{elm:"Morte",cur:1}],["Maldições (arma) · Morte","Erosiva","+1d8 de Morte (não multiplica no crítico); 2 PE: dano contínuo.","w",{elm:"Morte",cur:1,xd:1,xs:8,el:"Morte",nm:1}],["Maldições (arma) · Morte","Repulsora","+2 na Defesa; bloqueio com 2 PE dá +5.","w",{elm:"Morte",cur:1,df:2}],
+["Maldições (arma) · Sangue","Lancinante","+1d8 de Sangue, multiplicado no crítico.","w",{elm:"Sangue",cur:1,xd:1,xs:8,el:"Sangue"}],["Maldições (arma) · Sangue","Predadora","Ignora camuflagem e cobertura, +1 alcance, margem de ameaça dobrada.","w",{elm:"Sangue",cur:1,md:1}],["Maldições (arma) · Sangue","Sanguinária","Sangramento cumulativo; crítico drena e dá 2d10 PV temporários.","w",{elm:"Sangue",cur:1}],
+["Maldições (proteção) · Conhecimento","Abascanta","+5 contra rituais; reflete um ritual.","ps",{elm:"Conhecimento",cur:1}],["Maldições (proteção) · Conhecimento","Profética","RD Conhecimento 10; 2 PE: repete um teste de resistência.","ps",{elm:"Conhecimento",cur:1}],["Maldições (proteção) · Conhecimento","Sombria","+5 em Furtividade e ignora a penalidade de carga.","ps",{elm:"Conhecimento",cur:1}],
+["Maldições (proteção) · Energia","Cinética","+2 na Defesa e RD 2 (leve/escudo) ou 5 (pesada).","ps",{elm:"Energia",cur:1,df:2}],["Maldições (proteção) · Energia","Lépida","+10 em Atletismo e +3 m de deslocamento.","ps",{elm:"Energia",cur:1}],["Maldições (proteção) · Energia","Voltaica","RD Energia 10; 2 PE: 2d6 de Energia em adjacentes.","ps",{elm:"Energia",cur:1}],
+["Maldições (proteção) · Morte","Letárgica","+2 na Defesa; chance de ignorar o dano extra de crítico e furtivo.","ps",{elm:"Morte",cur:1,df:2}],["Maldições (proteção) · Morte","Repulsiva","RD Morte 10; 2 PE: 2d8 de Morte em quem ataca corpo a corpo.","ps",{elm:"Morte",cur:1}],
+["Maldições (proteção) · Sangue","Regenerativa","RD Sangue 10; 1 PE: cura 1d12 PV.","ps",{elm:"Sangue",cur:1}],["Maldições (proteção) · Sangue","Sádica","+1 em ataque e dano a cada 10 de dano sofrido.","ps",{elm:"Sangue",cur:1}],
+["Aprimoramentos (acessório)","Aprimorado","O bônus em perícia do acessório sobe para +5.","ac",{}],["Aprimoramentos (acessório)","Discreto","−1 espaço e +5 em Crime para ocultar (mesmo sem treino).","ac",{oc:5,pw:1}],["Aprimoramentos (acessório)","Função adicional","+2 em uma segunda perícia (escolha ao lado).","ac",{}],["Aprimoramentos (acessório)","Instrumental","Funciona como um kit de perícia (escolha a perícia).","ac",{}],
+["Maldições (acessório) · Conhecimento","Carisma","+1 em Presença (não dá PE extra).","ac",{elm:"Conhecimento",cur:1,at_pre:1}],["Maldições (acessório) · Conhecimento","Conjuração","Permite um ritual de 1º círculo.","ac",{elm:"Conhecimento",cur:1}],["Maldições (acessório) · Conhecimento","Escudo Mental","RD mental 10.","ac",{elm:"Conhecimento",cur:1}],["Maldições (acessório) · Conhecimento","Reflexão","Reflete um ritual.","ac",{elm:"Conhecimento",cur:1}],["Maldições (acessório) · Conhecimento","Sagacidade","+1 em Intelecto (não dá perícias extras).","ac",{elm:"Conhecimento",cur:1,at_int:1}],
+["Maldições (acessório) · Energia","Defesa","+5 na Defesa.","ac",{elm:"Energia",cur:1,df:5}],["Maldições (acessório) · Energia","Destreza","+1 em Agilidade.","ac",{elm:"Energia",cur:1,at_agi:1}],["Maldições (acessório) · Energia","Potência","+1 na DT dos seus rituais.","ac",{elm:"Energia",cur:1}],
+["Maldições (acessório) · Morte","Esforço Adicional","+5 PE depois de um dia de uso (marque “1 dia de uso”).","ac",{elm:"Morte",cur:1,pe:5}],
+["Maldições (acessório) · Sangue","Disposição","+1 em Vigor.","ac",{elm:"Sangue",cur:1,at_vig:1}],["Maldições (acessório) · Sangue","Pujança","+1 em Força.","ac",{elm:"Sangue",cur:1,at_for:1}],["Maldições (acessório) · Sangue","Vitalidade","+15 PV depois de um dia de uso (marque “1 dia de uso”).","ac",{elm:"Sangue",cur:1,pv:15}],
+["Maldições (acessório) · Variável","Proteção Elemental","RD 10 contra um elemento.","ac",{cur:1}]];
+const OPP={Sangue:"Conhecimento",Conhecimento:"Energia",Energia:"Morte",Morte:"Sangue"};
+const okMod=(f,e)=>{const t=e.t||"",w=isW(t),fo=/fogo/i.test(t);return f=="m"?w&&!fo:f=="f"?fo:f=="w"?w:f=="pl"?t=="Proteção leve":f=="ph"?t=="Proteção pesada":f=="p"?/^Proteção/.test(t):f=="ps"?/^Proteção|^Escudo/.test(t):f=="ac"?t=="Acessório":false};
+const MS=(e,k)=>(e.mods||[]).reduce((t,x)=>t+(+x[k]||0),0);
+const msum=x=>[x.a&&"+"+x.a+" atq",x.d&&"+"+x.d+" dano",x.m&&"+"+x.m+" margem",x.x&&"+"+x.x+" mult.",x.df&&"+"+x.df+" Defesa",x.xd&&"+"+x.xd+"d"+x.xs+" "+x.el,x.oc&&"+"+x.oc+" ocultar",x.pw>0&&"-"+x.pw+" peso",x.pw<0&&"+"+(-x.pw)+" peso",x.dx&&"+"+x.dx+" dado",x.md&&"margem dobrada",x.cg&&"+"+x.cg+" carga",...["agi","for","int","pre","vig"].map(k=>x["at_"+k]&&"+"+x["at_"+k]+" "+k.toUpperCase()),x.pv&&"+"+x.pv+" PV",x.pe&&"+"+x.pe+" PE"].filter(Boolean).join(", ");
+let PK={m:"eq"};
+function abrirPick(){PK={m:"eq"};$("ptt").textContent="Adicionar equipamento";$("psq").placeholder="Buscar: katana, pistola, proteção...";$("pick").hidden=false;$("psq").value="";pf();setTimeout(()=>$("psq").focus(),50)}
+function abrirMods(i){PK={m:"mod",i};$("ptt").textContent="Aprimoramentos e maldições";$("psq").placeholder="Buscar: certeira, sangue, mira...";$("pick").hidden=false;$("psq").value="";pf();setTimeout(()=>$("psq").focus(),50)}
+function pfm(){const raw=$("psq").value.trim(),q=nz(raw),e=S.eq[PK.i];let h="",g="";
+ if(raw)h+=`<div class="pi" onclick="addMod(-1)">➕ Criar “${esc(raw)}” (sem efeito numérico)</div>`;
+ MODS.forEach((c,j)=>{if(!okMod(c[3],e))return;if(q&&!nz(c[1]+" "+c[0]+" "+c[2]).includes(q))return;if(c[0]!=g){g=c[0];h+=`<div class="pg">${g}</div>`}h+=`<div class="pi" onclick="addMod(${j})"><b>${c[1]}</b> <small>${c[2]}</small></div>`});
+ $("pls").innerHTML=h||"<small>Nada encontrado para este tipo de equipamento.</small>"}
+function addMod(j){const e=S.eq[PK.i];e.mods=e.mods||[];let msg="";
+ if(j<0){const n=$("psq").value.trim();if(!n)return;e.mods.push({n})}
+ else{const c=MODS[j],f=c[4];
+  if(e.mods.some(x=>x.n==c[1]))msg="Esse aprimoramento já está no item (não acumula).";
+  else if(f.elm&&e.mods.some(x=>x.elm&&(OPP[x.elm]==f.elm||OPP[f.elm]==x.elm)))msg="Elementos opressores não combinam no mesmo item.";
+  else if(/^Proteção/.test(e.t||"")&&((c[1]=="Reforçada"&&e.mods.some(x=>x.n=="Discreta"))||(c[1]=="Discreta"&&e.mods.some(x=>x.n=="Reforçada"))))msg="Reforçada e Discreta não combinam.";
+  if(msg){$("pick").hidden=true;$("res").textContent=msg;return}
+  e.mods.push(Object.assign({n:c[1]},f))}
+ $("pick").hidden=true;atl();upd();salvar()}
+function rmMod(i,j){S.eq[i].mods.splice(j,1);atl();upd();salvar()}
+function pf(){if(PK.m=="inv")return pfi();if(PK.m=="mod")return pfm();const raw=$("psq").value.trim(),q=nz(raw);let h="",g="";
+ if(raw)h+=`<div class="pi" onclick="addNome('arma')">➕ Criar arma “${esc(raw)}”</div><div class="pi" onclick="addNome('eq')">➕ Criar equipamento “${esc(raw)}”</div>`;
+ CAT.forEach((c,i)=>{if(q&&!nz(c[1]+" "+c[0]+" "+c[7]+" "+c[12]).includes(q))return;if(c[0]!=g){g=c[0];h+=`<div class="group pg">${g}</div>`.replace('group ','')}const wt=/Arma/.test(c[2]),inf=[c[3]?c[3]+"d"+c[4]+(wt?" · crít. "+c[5]+"/×"+c[6]:"")+(c[7]?" · "+c[7]:""):"",c[8]?"+"+c[8]+" Defesa":"",c[9]+" esp.","cat. "+CR[c[10]],c[12]].filter(Boolean).join(" · ");h+=`<div class="pi" onclick="pickAdd(${i})"><b>${c[1]}</b> <small>${inf}</small></div>`});
+ $("pls").innerHTML=h||"<small>Nada encontrado.</small>"}
+function pickAdd(i){addCat(String(i));$("pick").hidden=true}
+function addNome(k){const n=$("psq").value.trim();S.eq.push(k=="arma"?{n,t:"Outra arma",be:0,pw:1,ct:0,ag:0,dq:1,dd:6,ds:"",cm:20,cx:2,tp:"Impacto",sk:ORD[0],aq:1,ad:20}:{n,t:"Outro",be:0,pw:1,ct:0,ag:0,dq:1,dd:6,ds:"",cm:20,cx:2,tp:"Corte",sk:ORD[0],aq:1,ad:20});atl();upd();salvar();$("pick").hidden=true}
+function re(i){S.eq.splice(i,1);atl();upd();salvar()}
+function ua(i,k,v){const e=S.eq[i];e[k]=v;if(k=="t"){if(v=="Proteção leve"&&!+e.be)e.be=5;if(v=="Proteção pesada"&&!+e.be)e.be=10;if(v=="Escudo"&&!+e.be)e.be=2;atl()}upd();salvar()}
+function eql(){$("eql").innerHTML=S.eq.length?S.eq.map((e,i)=>`<div class="hi" style="display:block"><div class="ar"><b style="flex:1;min-width:110px">${esc(e.n||"Sem nome")} <small>cat. ${catOf(e)}</small></b>${isW(e.t)?`<label style="margin:0;font-size:12px;display:flex;gap:3px;align-items:center"><input type="checkbox" ${e.ag?"checked":""} onchange="ua(${i},'ag',this.checked?1:0)" style="width:auto">Ágil</label>`:""}<select onchange="ua(${i},'t',this.value)">${ET.map(t=>`<option${t==e.t?" selected":""}>${t}</option>`).join("")}</select><span>+EQUIP</span><input type="number" value="${esc(e.be)}" style="width:56px" oninput="ua(${i},'be',this.value)"><span>Esp.</span><input type="number" step="0.5" min="0" value="${esc(e.pw??1)}" style="width:56px" oninput="ua(${i},'pw',this.value)">${MS(e,"pw")?`<small>→ ${EP(e)}</small>`:""}<button class="s" onclick="re(${i})">✕</button></div><div class="ar">${(e.mods||[]).map((x,j)=>`<span class="chip"><span>${esc(x.n)}${msum(x)?` <small>(${msum(x)})</small>`:""}</span><b onclick="rmMod(${i},${j})">✕</b></span>`).join("")}${accUI(e,i)}${e.dm?`<button class="s" onclick="rD(${i})">🎲 Dano</button>`:""}<button class="s" onclick="abrirMods(${i})">🔧 Aprimorar / amaldiçoar</button></div></div>`).join(""):"<small>Nenhum equipamento. Toque no botão abaixo para adicionar.</small>"}
+function atl(){const W=S.eq.map((e,i)=>[e,i]).filter(([e])=>isW(e.t));
+ $("atl").innerHTML=W.length?W.map(([e,i])=>`<div class="hi" style="display:block"><div style="margin-bottom:4px"><b>${esc(e.n||"Arma sem nome")}</b> <small>· ${e.t}${e.nt?" · "+esc(e.nt):""}</small>${(e.mods&&e.mods.length)?` <small>· 🔧 ${e.mods.map(x=>esc(x.n)).join(", ")}</small>`:""}</div>
+<div class="ar"><b style="min-width:50px">Ataque</b><select onchange="ua(${i},'sk',this.value)" title="Perícia do ataque">${ORD.map(k=>`<option value="${k}"${k==ek(e)?" selected":""}>${PER[k][0]}</option>`).join("")}</select>${num(e.aq??1,i,"aq",52)}${dsel(e.ad??20,i,"ad")}<button onclick="rA(${i})">🎲 Atacar + Dano</button></div>
+<div class="ar"><b style="min-width:50px">Dano</b>${num(e.dq,i,"dq",52)}${dsel(e.dd,i,"dd")}<span>+</span>${num(e.ds,i,"ds",96,"Soma (ex: 5)")}<select onchange="ua(${i},'tp',this.value)" title="Tipo de dano">${RT.map(t=>`<option${t==(e.tp||"Corte")?" selected":""}>${t}</option>`).join("")}</select></div>
+${MS(e,"oc")?`<div class="ar"><b style="min-width:50px">Ocultar</b><button class="s" onclick="rOc(${i})">🎲 Crime +${MS(e,"oc")}</button></div>`:""}<div class="ar"><b style="min-width:50px">Crítico</b><span>margem</span>${num(e.cm??20,i,"cm",52)}${(MS(e,"m")||MS(e,"md"))?`<small>→ ${mgOf(e)}</small>`:""}<span>mult. ×</span>${num(e.cx??2,i,"cx",52)}</div></div>`).join(""):"<small>Nenhuma arma. Adicione uma em EQUIP.</small>";eql()}
+const d6=n=>1+Math.floor(Math.random()*n);
+function dmg(a,m){const q=Math.max(1,(+a.dq||1)+MS(a,"dx"))*m,ds=Array.from({length:q},()=>d6(+a.dd)),ab=dmgAttr(a),so=(String(a.ds||"").match(/[+-]?\d+/g)||[]).reduce((x,y)=>x+ +y,0)+MS(a,"d")+ab.v,ex=[];
+ (a.mods||[]).forEach(x=>{if(+x.xd&&+x.xs){const xs=Array.from({length:(+x.xd)*(x.nm?1:m)},()=>d6(+x.xs));ex.push({s:+x.xs,el:x.el||x.n,ds:xs,sm:xs.reduce((p,c)=>p+c,0)})}});
+ const sm=ds.reduce((x,y)=>x+y,0)+ex.reduce((p,c)=>p+c.sm,0);return{q,ds,sm,so,t:sm+so,ex,an:ab.n,av:ab.v}}
+const dtx=(a,D)=>`dano${a.tp?" ("+esc(a.tp)+")":""} ${D.q}d${a.dd}${a.ds?"+"+esc(String(a.ds).replace(/^\+/,"")):""}: [${D.ds.join(", ")}]${(D.ex||[]).map(x=>` + ${x.ds.length}d${x.s} ${esc(x.el)} [${x.ds.join(", ")}]`).join("")} = ${D.sm} + ${D.so} = <b style="font-size:20px">${D.t}</b>${D.av?` <small>(${D.an} +${D.av} incluso)</small>`:""}`;
+function rOc(i){const e=S.eq[i],k=ix("Crime"),[nm,at]=PER[k],A=ea(at),b=efb(k)+MS(e,"oc"),cdl=cmod(at,nm,0),n0=A+cdl,q=Math.min(30,n0>0?n0:2),ds=Array.from({length:q},()=>d6(20)),p=n0>0?Math.max(...ds):Math.min(...ds);
+ mostrar(ds,ds.indexOf(p),p,()=>res(`<b>${esc(e.n||"Arma")}</b> (ocultar · ${nm}): ${q}d20${cdl?` (cond. ${cdl}d20)`:""} [${ds.join(", ")}] → ${p} + ${b} = <b style="font-size:20px">${p+b}</b>`))}
+function rA(i){const a=S.eq[i],k=ek(a),nm=PER[k][0],at=(a.ag&&nm=="Luta")?"agi":PER[k][1],A=ea(at),b=efb(k)+MS(a,"a"),cdl=cmod(at,nm,1),A2=A+cdl,ad=+(a.ad??20),mg=mgOf(a),mx=Math.max(1,(+a.cx||2)+MS(a,"x"));
+ const go=(ds,idx,p,t,r,crit)=>{const m=crit?mx:1,D=dmg(a,m),fin=[...ds,...D.ds,...D.ex.flatMap(x=>x.ds)],sd=[...ds.map(()=>ad),...D.ds.map(()=>+a.dd),...D.ex.flatMap(x=>x.ds.map(()=>x.s))];
+  mostrar(fin,idx,p,()=>res(`<b>${esc(a.n||"Arma")}</b> (${nm}): ${t} + ${b} = <b style="font-size:20px">${r}</b>${crit?` 💥 <b>CRÍTICO ×${m}</b>`:""}<br>${dtx(a,D)}`),{sd,na:ds.length})};
+ if(ad==20){const q=Math.min(30,A2>0?A2:2),ds=Array.from({length:q},()=>d6(20)),p=A2>0?Math.max(...ds):Math.min(...ds);go(ds,ds.indexOf(p),p,`${q}d20${cdl?` (cond. ${cdl}d20)`:""} [${ds.join(", ")}] → ${p}`,p+b,p>=mg)}
+ else{const q=Math.max(1,+a.aq||1),ds=Array.from({length:q},()=>d6(ad)),sm=ds.reduce((x,y)=>x+y,0);go(ds,-1,0,`${q}d${ad} [${ds.join(", ")}] = ${sm}`,sm+b,false)}}
+function rD(i,c){const a=S.eq[i],m=c?Math.max(1,+a.cx||2):1,D=dmg(a,m);out(`<b>${esc(a.n||"Arma")}</b>${c?` 💥 <b>CRÍTICO ×${m}</b>`:""} — ${dtx(a,D)}`)}
+const CT=["0","I","II","III","IV"];
+function abrirInv(){PK={m:"inv"};$("ptt").textContent="Adicionar ao inventário";$("psq").placeholder="Buscar: granada, lanterna, kit, munição...";$("pick").hidden=false;$("psq").value="";pf();setTimeout(()=>$("psq").focus(),50)}
+function pfi(){const raw=$("psq").value.trim(),q=nz(raw);let h="",g="";
+ if(raw)h+=`<div class="pi" onclick="addInvNome()">➕ Criar item “${esc(raw)}”</div>`;
+ IV.forEach((c,i)=>{if(q&&!nz(c[1]+" "+c[0]+" "+c[4]).includes(q))return;if(c[0]!=g){g=c[0];h+=`<div class="pg">${g}</div>`}h+=`<div class="pi" onclick="addInv(${i})"><b>${c[1]}</b> <small>cat. ${CR[c[2]]} · ${c[3]} esp.${fxTxt(c)?" · "+fxTxt(c):""}${c[4]?" · "+c[4]:""}</small></div>`});
+ $("pls").innerHTML=h||"<small>Nada encontrado.</small>"}
+function addInv(i){const c=IV[i],ex=c[5]?null:S.inv.find(x=>x.n==c[1]),fx=INVFX[c[1]]?Object.assign({},INVFX[c[1]]):c[5]=="kit"?{kit:1}:c[5]?{v:2,ch:1}:null;if(ex)ex.q=(+ex.q||1)+1;else S.inv.push({n:c[1],c:CR[c[2]],e:c[3],q:1,nt:c[4]||"",fx,bp:c[6]||"",on:0});$("pick").hidden=true;inl();upd();salvar()}
+function addInvNome(){const n=$("psq").value.trim();if(!n)return;S.inv.push({n,c:"0",e:1,q:1,nt:""});$("pick").hidden=true;inl();salvar()}
+function ri(i){S.inv.splice(i,1);inl();upd();salvar()}
+function ui(i,k,v){S.inv[i][k]=v;cg();upd();salvar()}
+function inl(){const fq=nz(($("isq")||{}).value||"");$("il").innerHTML=S.inv.length?S.inv.map((it,i)=>`<div class="hi" style="display:${!fq||nz(it.n+" "+(it.nt||"")).includes(fq)?"block":"none"}"><div class="ar"><input placeholder="Item" style="flex:1;min-width:120px" value="${esc(it.n)}" oninput="ui(${i},'n',this.value)"><select onchange="ui(${i},'c',this.value)" title="Categoria">${CT.map(c=>`<option${c==it.c?" selected":""}>${c}</option>`).join("")}</select><span>Esp.</span><input type="number" step="0.5" min="0" value="${esc(it.e)}" style="width:60px" oninput="ui(${i},'e',this.value)"><span>Qtd</span><input type="number" min="1" value="${esc(it.q)}" style="width:54px" oninput="ui(${i},'q',this.value)"><button class="s" onclick="ri(${i})">✕</button></div>${it.fx?`<div class="ar">${fxUI(it,i)}</div>`:""}${it.nt?`<small style="color:var(--mut)">${esc(it.nt)}</small>`:""}</div>`).join(""):"<small>Nenhum item.</small>";cg()}
+function cg(){const t=S.inv.reduce((a,i)=>a+(+i.e||0)*(+i.q||0),0)+(S.eq||[]).reduce((a,e)=>a+EP(e),0),f=ea("for"),cap=(f>0?5*f:2)+((S.eq||[]).some(e=>MS(e,"cg")>0)||S.inv.some(x=>/^Mochila militar/i.test(x.n))?2:0);$("cg").innerHTML=`· ${t} / ${cap} espaços`+(t>cap?" ⚠ sobrecarregado":"")}
+function fot(){const e=$("foto");$("fph").style.display=S.foto?"none":"flex";if(S.foto){e.src=S.foto;e.style.display=""}else e.style.display="none"}
+function delImg(){S.foto="";fot();salvar()}
+function profU(){const p=$("prof");if(p)$("prof2").hidden=p.value!="Outra"}
+let CI,ox=0,oy=0,lk=1,ds=null,CW=280,CH=280;
+const cz=()=>Math.max(CW/CI.width,CH/CI.height)*$("zm").value;
+function cd(){const k=cz(),c=$("cv").getContext("2d");ox=Math.min(0,Math.max(CW-CI.width*k,ox));oy=Math.min(0,Math.max(CH-CI.height*k,oy));c.clearRect(0,0,CW,CH);c.drawImage(CI,ox,oy,CI.width*k,CI.height*k)}
+function zmv(){const k0=lk,k=cz(),cx=(CW/2-ox)/k0,cy=(CH/2-oy)/k0;ox=CW/2-cx*k;oy=CH/2-cy*k;lk=k;cd()}
+function setR(){const[a,b]=$("rt").value.split(":").map(Number),v=$("cv");if(a>=b){CW=280;CH=Math.round(280*b/a)}else{CH=280;CW=Math.round(280*a/b)}
+ v.width=CW;v.height=CH;v.style.width="100%";v.style.maxWidth=CW+"px";v.style.aspectRatio=CW+"/"+CH;$("zm").value=1;lk=cz();ox=(CW-CI.width*lk)/2;oy=(CH-CI.height*lk)/2;cd()}
+function img(f){if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{CI=im;$("crop").hidden=false;setR()};im.src=r.result};r.readAsDataURL(f);$("fimg").value=""}
+function cropOk(){const L=400,d=CW>=CH?[L,Math.round(L*CH/CW)]:[Math.round(L*CW/CH),L],o=document.createElement("canvas");o.width=d[0];o.height=d[1];const f=d[0]/CW,k=cz();o.getContext("2d").drawImage(CI,ox*f,oy*f,CI.width*k*f,CI.height*k*f);S.foto=o.toDataURL("image/jpeg",.85);$("crop").hidden=true;fot();salvar()}
+function cropNo(){$("crop").hidden=true}
+$("cv").onpointerdown=e=>{ds={x:e.clientX,y:e.clientY,ox,oy};$("cv").setPointerCapture(e.pointerId)};
+$("cv").onpointermove=e=>{if(!ds)return;const f=CW/$("cv").getBoundingClientRect().width;ox=ds.ox+(e.clientX-ds.x)*f;oy=ds.oy+(e.clientY-ds.y)*f;cd()};
+$("cv").onpointerup=$("cv").onpointercancel=()=>{ds=null};
+const TD={"A Favorita":"escolha uma arma favorita; as habilidades da trilha só valem para ela","Técnica Secreta":"a categoria da arma favorita é reduzida; gasta 2 PE para aplicar um efeito (ex.: atingir alvo adicional, +1 no multiplicador de crítico), com +2 PE por efeito extra","Técnica Sublime":"novos efeitos: Letal (+2 na margem de ameaça; até +5 escolhendo duas vezes) e Perfurante (ignora até 5 de resistência a dano)","Máquina de Matar":"a arma favorita tem a categoria reduzida de novo, +2 na margem de ameaça e mais um dado de dano do mesmo tipo","Técnica Letal":"+2 na margem de ameaça em todos os ataques corpo a corpo"};
+const RT=["Balístico","Corte","Impacto","Perfuração","Eletricidade","Fogo","Frio","Químico","Mental","Sangue","Morte","Conhecimento","Energia","Medo"];
+$("rsl").innerHTML=RT.map((t,i)=>`<div><label>${t}</label><input id="rs${i}" placeholder="ex: 5"></div>`).join("");
+const CND=[["Abalado","−1d20 em testes de perícia."],["Agarrado","Desprevenido e imóvel; −1d20 em ataques."],["Apavorado","−2d20 em testes de perícia; precisa fugir da fonte do medo."],["Atordoado","Desprevenido e sem ações."],["Caído","No chão; penalidade em ataques corpo a corpo e deslocamento reduzido."],["Cego","Desprevenido e lento; −2d20 em Agilidade e Força."],["Confuso","Age de forma aleatória."],["Debilitado","−2d20 em Agilidade, Força e Vigor."],["Desprevenido","−5 na Defesa e −1d20 em Reflexos."],["Enjoado","Só pode fazer uma ação padrão ou de movimento."],["Enlouquecendo","SAN em 0; perde o controle."],["Envenenado","Sofre dano contínuo."],["Esmorecido","−2d20 em Intelecto e Presença."],["Exausto","Debilitado, lento e vulnerável."],["Fatigado","Fraco e vulnerável."],["Fraco","−1d20 em Agilidade, Força e Vigor."],["Frustrado","−1d20 em Intelecto e Presença."],["Inconsciente","Indefeso e sem ações."],["Lento","Deslocamento reduzido à metade."],["Machucado","PV abaixo da metade."],["Morrendo","0 PV: precisa ser estabilizado."],["Paralisado","Imóvel e indefeso."],["Sangrando","Perde PV a cada rodada até estancar."],["Vulnerável","−2 na Defesa."]];
+const CEF={Abalado:{all:-1},Agarrado:{atk:-1,def:-5},Apavorado:{all:-2},Atordoado:{def:-5},Cego:{agi:-2,for:-2,def:-5},Debilitado:{agi:-2,for:-2,vig:-2},Desprevenido:{def:-5,sk:{Reflexos:-1}},Esmorecido:{int:-2,pre:-2},Exausto:{agi:-2,for:-2,vig:-2,def:-2},Fatigado:{agi:-1,for:-1,vig:-1,def:-2},Fraco:{agi:-1,for:-1,vig:-1},Frustrado:{int:-1,pre:-1},Vulnerável:{def:-2}};
+const cmod=(a,n,atk)=>{let d=0;for(const k in S.cond)if(S.cond[k]&&CEF[k]){const e=CEF[k];d+=(e.all||0)+(e[a]||0)+(atk?(e.atk||0):0)+((e.sk&&e.sk[n])||0)}return d};
+const cdef=()=>Object.keys(S.cond).reduce((t,k)=>t+(S.cond[k]&&CEF[k]?CEF[k].def||0:0),0);
+function cnl(){$("cnd").innerHTML=CND.map(([n,d])=>`<label class="cd"><input type="checkbox" ${S.cond[n]?"checked":""} onchange="tgC('${n}',this.checked)"><span><b>${n}</b> <small>${d}</small></span></label>`).join("")}
+function tgC(n,c){S.cond[n]=c;upd();salvar()}
+function cmsg(){const t={},an=[];let df=0;for(const k in S.cond)if(S.cond[k]){an.push(k);const e=CEF[k];if(e)for(const x in e){if(x=="sk")for(const y in e.sk)t[y]=(t[y]||0)+e.sk[y];else if(x=="def")df+=e.def;else t[x]=(t[x]||0)+e[x]}}
+ const nm={all:"todos os testes",agi:"AGI",for:"FOR",int:"INT",pre:"PRE",vig:"VIG",atk:"ataques"},dd=Object.keys(t).filter(k=>t[k]).map(k=>`${nm[k]||k} ${t[k]}d20`);
+ $("cmsg").innerHTML=an.length?`<b>Ativas:</b> ${an.join(", ")}${dd.length?` · <b>Dados:</b> ${dd.join("; ")}`:""}${df?` · <b>Defesa:</b> ${df}`:""}`:"<small>Nenhuma condição ativa.</small>"}
+function out(h){$("res").innerHTML=h;S.rl.unshift(h);if(S.rl.length>30)S.rl.length=30;hst();salvar()}
+function hst(){if(!$("hs"))return;$("hs").innerHTML=S.rl.length?S.rl.map(x=>`<div class="hi" style="padding:5px 0;display:block">${x}</div>`).join(""):"<small>Nenhuma rolagem ainda.</small>"}
+function limpH(){S.rl=[];hst();salvar()}
+function imprimir(){try{window.print()}catch(e){}}
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+let IDX={cur:"",list:[]},ID="",dt=0;
+const sidx=()=>{try{localStorage.setItem("op_fichas",JSON.stringify(IDX))}catch(e){}};
+function fsel(){$("fsel").innerHTML=IDX.list.map(x=>`<option value="${x.id}"${x.id==ID?" selected":""}>${esc(x.n)}</option>`).join("")}
+function zera(){S={att:{agi:1,for:1,int:1,pre:1,vig:1},per:{},cur:{pv:null,pe:null,sa:null}};CAMPOS.forEach(c=>{const e=$(c);if(c=="nex")e.value=5;else if(c=="classe")e.value="Combatente";else if(c=="bdef"||c=="odef")e.value=0;else if(c=="desl")e.value="9m";else e.value=e.tagName=="SELECT"?e.options[0].value:""});aplicar({S})}
+function carrega(){let o=null;try{o=JSON.parse(localStorage.getItem("op_f_"+ID)||"null")}catch(e){}zera();if(o)aplicar(o)}
+function ini(){try{const x=JSON.parse(localStorage.getItem("op_fichas")||"null");if(x&&x.list&&x.list.length)IDX=x;else{const old=JSON.parse(localStorage.getItem("op_ficha")||"null"),id=uid();IDX={cur:id,list:[{id,n:(old&&old.nome)||"Sem nome"}]};if(old)localStorage.setItem("op_f_"+id,JSON.stringify(old));sidx()}}catch(e){const id=uid();IDX={cur:id,list:[{id,n:"Sem nome"}]}}
+ ID=IDX.cur;carrega();fsel()}
+function nova(){salvar();const id=uid();IDX.list.push({id,n:"Sem nome"});IDX.cur=ID=id;sidx();zera();salvar();fsel()}
+function troca(id){salvar();ID=IDX.cur=id;sidx();carrega();fsel()}
+function dup(){salvar();try{const o=JSON.parse(localStorage.getItem("op_f_"+ID)),id=uid(),n=($("nome").value||"Ficha")+" (cópia)";o.nome=n;localStorage.setItem("op_f_"+id,JSON.stringify(o));IDX.list.push({id,n});ID=IDX.cur=id;sidx();carrega();fsel()}catch(e){}}
+function del(){const b=$("bdel");if(!dt){dt=1;b.textContent="Confirmar exclusão?";setTimeout(()=>{dt=0;b.textContent="Excluir"},3000);return}
+ dt=0;b.textContent="Excluir";try{localStorage.removeItem("op_f_"+ID)}catch(e){}IDX.list=IDX.list.filter(x=>x.id!=ID);if(!IDX.list.length)IDX.list.push({id:uid(),n:"Sem nome"});ID=IDX.cur=IDX.list[0].id;sidx();carrega();fsel()}
+let CUR=1,COL={};try{COL=JSON.parse(localStorage.getItem("op_col3")||"{}")}catch(e){}
+const CARDS=[...document.querySelectorAll(".card")].filter(c=>c.querySelector("h2")&&!c.closest("#crop,#cfg,#pick"));
+function colA(){CARDS.forEach((c,i)=>c.classList.toggle("fc",!!COL[i]))}
+function colS(){try{localStorage.setItem("op_col3",JSON.stringify(COL))}catch(e){}colA()}
+function colAll(v){CARDS.forEach((_,i)=>COL[i]=v);colS()}
+CARDS.forEach((c,i)=>{const h=c.querySelector("h2");h.title="Clique para recolher/expandir";h.onclick=e=>{if(e.target.tagName=="BUTTON")return;COL[i]=!COL[i];colS()}});
+colA();
+globalThis.onbeforeprint=()=>[1,2,3,4,5,6].forEach(k=>$("t"+k).hidden=false);globalThis.onafterprint=()=>tab(CUR);
+const NX=()=>{const v=$("nex").value;return v=="outro"?(parseFloat($("nex2").value)||5):+v};
+function outU(){AT.forEach(([k])=>{$("aq_"+k).placeholder=ea(k);$("ae_"+k).textContent=EAB(k)?"(+"+EAB(k)+")":""});$("origem2").hidden=$("ogs").hidden=$("origem").value!="Outro";$("classe2").hidden=$("classe").value!="Outro";$("trilha2").hidden=$("trilha").value!="Outro";$("nex2").hidden=$("nex").value!="outro"}
+["og1","og2"].forEach(id=>$(id).innerHTML='<option value="">— perícia —</option>'+PER.map(p=>p[0]).sort((a,b)=>a.localeCompare(b,"pt")).map(n=>`<option>${n}</option>`).join(""));
+const VIS0={man:true,el:"Sangue",mesa:"#1a1a1f",dado:"#a01226",num:"#ffffff",aura:"#c8102e",est:"cristal",fx:true};
+let VIS=Object.assign({},VIS0);try{Object.assign(VIS,JSON.parse(localStorage.getItem("op_vis")||"{}"))}catch(e){}
+const PRE=[["Sangue",{mesa:"#1a1a1f",dado:"#a01226",num:"#ffffff",aura:"#c8102e"}],["Gelo",{mesa:"#0e1722",dado:"#4aa8e0",num:"#ffffff",aura:"#7fd6ff"}],["Veneno",{mesa:"#0e1a12",dado:"#2f9e55",num:"#eaffea",aura:"#5dff8a"}],["Ouro",{mesa:"#1a1408",dado:"#c9922b",num:"#2a1600",aura:"#ffd36b"}],["Vazio",{mesa:"#0d0a14",dado:"#5b3aa8",num:"#ffffff",aura:"#a06bff"}]];
+function visUI(){$("vc_el").value=VIS.el;$("vc_mesa").value=VIS.mesa;$("vc_dado").value=VIS.dado;$("vc_num").value=VIS.num;$("vc_aura").value=VIS.aura;$("vc_est").value=VIS.est;$("vc_fx").checked=!!VIS.fx;$("vc_man").checked=VIS.man!==false}
+function vis(){VIS.mesa=$("vc_mesa").value;VIS.dado=$("vc_dado").value;VIS.num=$("vc_num").value;VIS.aura=$("vc_aura").value;VIS.est=$("vc_est").value;VIS.fx=$("vc_fx").checked;VIS.man=$("vc_man").checked;try{localStorage.setItem("op_vis",JSON.stringify(VIS))}catch(e){}D3.apply()}
+function preset(i){Object.assign(VIS,PRE[i][1]);visUI();vis()}
+function rollDemo(n){const fin=n==20?[7,20,12]:n==1?[9,1,1]:[1,2,3].map(()=>d6(20)),p=n==1?1:Math.max(...fin);mostrar(fin,fin.indexOf(p),p,()=>{$("tres").innerHTML=`Teste: [${fin.join(", ")}] → <b>${p}</b>`})}
+const ELP={Sangue:{mesa:"#14070a",dado:"#a01226",num:"#ffffff",aura:"#e0182d"},Morte:{mesa:"#08060c",dado:"#2a2233",num:"#d8e6d0",aura:"#8a5cff"},Conhecimento:{mesa:"#150f06",dado:"#b8862a",num:"#fff3c4",aura:"#ffd36b"},Medo:{mesa:"#0b0f14",dado:"#8fa3b5",num:"#ffffff",aura:"#cfe3ff"},Nenhum:{mesa:"#1a1a1f",dado:"#a01226",num:"#ffffff",aura:"#c8102e"}};
+function elem(e){VIS.el=e;Object.assign(VIS,ELP[e]);visUI();vis()}
+const ban=k=>`<div class="${k==20?"fx20":"fx1"}" style="--fxc:${VIS.aura}">${k==20?20:1}</div>`;
+const PU=t=>{const e=VIS.el;return e=="Sangue"?.5+.5*Math.pow(Math.sin(t*3),6):e=="Medo"?.5+.5*Math.sin(t*.9):.5+.5*Math.sin(t*2)};
+const AM={Sangue:{vy:-1.4,sz:.3},Morte:{vy:.6,sz:.5},Conhecimento:{vy:.9,sz:.28},Medo:{vy:.4,sz:.95},Nenhum:{vy:.8,sz:.45}};
+const BG={boost:0,
+ go(){this.boost=0;cancelAnimationFrame(this.raf);if(BGL.start()){$("bg2").style.display="none";return}$("bgl").style.display="none";$("bg2").style.display="block";const c=$("bg2");this.size(c);this.init();this.t0=performance.now();this.loop()},
+ size(c){const d=Math.min(devicePixelRatio||1,2),w=c.clientWidth||600,h=c.clientHeight||340;c.width=w*d;c.height=h*d;this.w=w;this.h=h;this.c=c.getContext("2d");this.c.setTransform(d,0,0,d,0,0)},
+ vein(x,y,a,d){const o=[{x,y}];let cx=x,cy=y,ca=a;for(let i=0;i<14;i++){ca+=(Math.random()-.5)*.9;cx+=Math.cos(ca)*18;cy+=Math.sin(ca)*18;o.push({x:cx,y:cy})}const r={p:o,k:[]};if(d>0)for(let i=0;i<2;i++){const j=3+Math.floor(Math.random()*8);r.k.push(this.vein(o[j].x,o[j].y,ca+(Math.random()-.5)*2.4,d-2))}return r},
+ init(){const R=Math.random,w=this.w,h=this.h,e=VIS.el,st=this.st={};
+  if(e=="Sangue"){st.v=[0,1,2,3,4].map(()=>this.vein(R()*w,R()<.5?0:h,R()<.5?1.57:-1.57,5));st.d=Array.from({length:16},()=>({x:R()*w,y:-R()*h,s:30+R()*60,l:20+R()*40,w:1.5+R()*2.5}))}
+  if(e=="Morte"){st.t=Array.from({length:6},(_,i)=>({x:(i+.5)*w/6,a:-1.57+(R()-.5)*.6,ph:R()*6,len:h*(.5+R()*.4),wd:10+R()*8}));st.b=Array.from({length:7},()=>({x:R()*w,y:R()*h,r:R()*6,vr:(R()-.5)*1.5,vx:(R()-.5)*14,vy:(R()-.5)*8,s:.6+R()*.8}));st.k=Array.from({length:3},()=>({x:R()*w,y:h*.15+R()*h*.5,ph:R()*6,s:.7+R()*.7}))}
+  if(e=="Conhecimento"){st.p=Array.from({length:4},()=>({x:R()*w,y:R()*h,r:(R()-.5)*.8,ph:R()*6,s:.7+R()*.5}));st.s=Array.from({length:30},()=>({x:R()*w,y:R()*h,ph:R()*6}))}
+  if(e=="Medo"){st.m=Array.from({length:7},()=>({x:R()*w,y:R()*h,r:h*(.5+R()*.6),vx:(R()-.5)*18,a:.1+R()*.12}));st.e=Array.from({length:4},()=>({x:R()*w,y:R()*h*.7,ph:R()*6,s:3+R()*2}))}},
+ loop(){this.raf=requestAnimationFrame(()=>{if($("dice").hidden)return;this.draw((performance.now()-this.t0)/1000);this.loop()})},
+ draw(t){const c=this.c,w=this.w,h=this.h,e=VIS.el,b=this.boost=Math.max(0,this.boost-.012),a=VIS.aura;c.clearRect(0,0,w,h);
+  const g=c.createRadialGradient(w/2,h*.55,10,w/2,h/2,Math.max(w,h)*.75);g.addColorStop(0,VIS.mesa);g.addColorStop(1,"#000");c.fillStyle=g;c.fillRect(0,0,w,h);
+  if(!VIS.fx)return;const f=this["d"+e];if(f)f.call(this,c,w,h,t,b,a);c.globalAlpha=1;c.shadowBlur=0},
+ dSangue(c,w,h,t,b,a){const pu=.5+.5*Math.pow(Math.sin(t*3),6)+b*.6;c.lineCap="round";c.strokeStyle=a;c.shadowColor=a;c.shadowBlur=6+14*pu;c.globalAlpha=Math.min(1,.25+.45*pu);
+  const dv=(v,wd)=>{c.lineWidth=wd*(1+.3*pu);c.beginPath();v.p.forEach((q,i)=>i?c.lineTo(q.x,q.y):c.moveTo(q.x,q.y));c.stroke();v.k.forEach(k=>dv(k,wd*.65))};this.st.v.forEach(v=>dv(v,3.2));
+  c.shadowBlur=0;c.globalAlpha=.85;
+  this.st.d.forEach(d=>{d.y+=d.s*.016*(1+b*2);if(d.y-d.l>h)d.y=-10-Math.random()*40;const gr=c.createLinearGradient(0,d.y-d.l,0,d.y);gr.addColorStop(0,"rgba(120,0,10,0)");gr.addColorStop(1,a);c.strokeStyle=gr;c.lineWidth=d.w;c.beginPath();c.moveTo(d.x,d.y-d.l);c.lineTo(d.x,d.y);c.stroke();c.fillStyle=a;c.beginPath();c.arc(d.x,d.y,d.w*.9,0,6.283);c.fill()});
+  c.globalAlpha=1;const bl=c.createLinearGradient(0,0,0,h*.14);bl.addColorStop(0,"rgba(90,0,8,.9)");bl.addColorStop(1,"rgba(90,0,8,0)");c.fillStyle=bl;c.fillRect(0,0,w,h*.14)},
+ dMorte(c,w,h,t,b,a){c.lineCap="round";this.st.t.forEach(q=>{c.strokeStyle="#07000b";const n=16,len=q.len*(1+b*.4);let x=q.x,y=h+6,ang=q.a;
+   for(let i=0;i<n;i++){ang+=Math.sin(t*1.3+q.ph+i*.5)*.09;const sx=x,sy=y;x+=Math.cos(ang)*len/n;y+=Math.sin(ang)*len/n;c.lineWidth=q.wd*(1-i/n)+1;c.shadowColor=a;c.shadowBlur=8;c.beginPath();c.moveTo(sx,sy);c.lineTo(x,y);c.stroke()}});
+  c.shadowBlur=0;this.st.b.forEach(o=>{o.x+=o.vx*.016;o.y+=o.vy*.016;o.r+=o.vr*.016;if(o.x<-30)o.x=w+30;if(o.x>w+30)o.x=-30;if(o.y<-30)o.y=h+30;if(o.y>h+30)o.y=-30;c.save();c.translate(o.x,o.y);c.rotate(o.r);c.scale(o.s,o.s);c.globalAlpha=.5;c.fillStyle="#e8e6d8";c.fillRect(-18,-3,36,6);[[-18,-4],[-18,4],[18,-4],[18,4]].forEach(p=>{c.beginPath();c.arc(p[0],p[1],4,0,6.283);c.fill()});c.restore()});
+  this.st.k.forEach(k=>{c.save();c.translate(k.x+Math.sin(t*.3+k.ph)*10,k.y);c.scale(k.s,k.s);c.globalAlpha=(.5+.5*Math.sin(t*.5+k.ph))*.35+b*.4;c.fillStyle="#e8e6d8";c.beginPath();c.arc(0,0,22,0,6.283);c.fill();c.fillRect(-13,14,26,16);c.fillStyle="#08000c";c.beginPath();c.arc(-8,-2,6,0,6.283);c.fill();c.beginPath();c.arc(8,-2,6,0,6.283);c.fill();c.beginPath();c.moveTo(0,5);c.lineTo(-3,12);c.lineTo(3,12);c.fill();for(let i=-8;i<=8;i+=5)c.fillRect(i,22,1.5,8);c.restore()})},
+ dConhecimento(c,w,h,t,b,a){c.strokeStyle=a;c.shadowColor=a;c.shadowBlur=10+10*b;
+  [[w*.28,h*.5,h*.42,1],[w*.74,h*.45,h*.3,-1.4]].forEach(([x,y,r,s])=>{c.save();c.translate(x,y);c.rotate(t*.25*s*(1+b*3));c.globalAlpha=.28+.25*b;c.lineWidth=1.5;[1,.82,.58].forEach(k=>{c.beginPath();c.arc(0,0,r*k,0,6.283);c.stroke()});
+   for(let i=0;i<12;i++){c.rotate(Math.PI/6);c.beginPath();c.moveTo(r*.82,0);c.lineTo(r,0);c.stroke();c.beginPath();c.moveTo(r*.64,-6);c.lineTo(r*.7,6);c.lineTo(r*.58,6);c.stroke()}
+   c.beginPath();for(let i=0;i<5;i++){const an=i*Math.PI*4/5-1.57;c.lineTo(Math.cos(an)*r*.58,Math.sin(an)*r*.58)}c.closePath();c.stroke();c.restore()});
+  c.shadowBlur=0;this.st.p.forEach(p=>{c.save();c.translate(p.x+Math.sin(t*.4+p.ph)*14,p.y+Math.cos(t*.5+p.ph)*10);c.rotate(p.r+Math.sin(t*.3+p.ph)*.1);c.scale(p.s,p.s);c.globalAlpha=.4;c.fillStyle="#e6d4a0";c.fillRect(-22,-14,44,28);c.fillStyle="#b8923c";c.fillRect(-26,-16,5,32);c.fillRect(21,-16,5,32);c.fillStyle="#6b4a10";for(let i=-8;i<=8;i+=5)c.fillRect(-16,i,32,1.2);c.restore()});
+  this.st.s.forEach(s=>{c.globalAlpha=.3+.7*Math.pow(Math.max(0,Math.sin(t*2+s.ph)),3);c.fillStyle=a;c.fillRect(s.x,s.y,2,2)})},
+ dMedo(c,w,h,t,b,a){this.st.m.forEach(m=>{m.x+=m.vx*.016;if(m.x>w+m.r)m.x=-m.r;if(m.x<-m.r)m.x=w+m.r;const g=c.createRadialGradient(m.x,m.y,0,m.x,m.y,m.r);g.addColorStop(0,"rgba(190,205,225,"+(m.a+b*.15)+")");g.addColorStop(1,"rgba(190,205,225,0)");c.fillStyle=g;c.fillRect(m.x-m.r,m.y-m.r,m.r*2,m.r*2)});
+  const al=Math.max(0,Math.sin(t*.35)),sx=w*.82,sy=h*.2,gl=c.createRadialGradient(sx,sy+h*.2,0,sx,sy+h*.2,h*.5);gl.addColorStop(0,"rgba(190,205,225,"+(.25*al)+")");gl.addColorStop(1,"rgba(190,205,225,0)");c.fillStyle=gl;c.fillRect(sx-h*.5,0,h,h);
+  c.fillStyle="rgba(0,0,0,"+(al*.75)+")";c.beginPath();c.arc(sx,sy,h*.05,0,6.283);c.fill();c.beginPath();c.moveTo(sx-h*.07,sy+h*.07);c.lineTo(sx+h*.07,sy+h*.07);c.lineTo(sx+h*.03,h);c.lineTo(sx-h*.03,h);c.closePath();c.fill();
+  this.st.e.forEach(e=>{const o=Math.sin(t*.8+e.ph);if(o>.4){c.globalAlpha=Math.min(1,(o-.4)*2)*(.6+b*.4);c.fillStyle=a;c.shadowColor=a;c.shadowBlur=10;[-1,1].forEach(s=>{c.beginPath();c.ellipse(e.x+s*e.s*2.2,e.y,e.s,e.s*.5,0,0,6.283);c.fill()});c.shadowBlur=0;c.globalAlpha=1}})}};
+const BGL={ok:null,
+ init(){if(this.ok!==null)return this.ok;try{const c=$("bgl"),gl=this.gl=c.getContext("webgl",{antialias:false,alpha:false});if(!gl)throw 0;
+  const sh=(t,src)=>{const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s},pr=gl.createProgram();
+  gl.attachShader(pr,sh(gl.VERTEX_SHADER,"attribute vec2 a;void main(){gl_Position=vec4(a,0.0,1.0);}"));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,BGL.fs));gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))throw new Error("link");
+  gl.useProgram(pr);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);const l=gl.getAttribLocation(pr,"a");gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
+  this.u={};["uT","uR","uA","uM","uB","uE"].forEach(n=>this.u[n]=gl.getUniformLocation(pr,n));return this.ok=true}catch(e){return this.ok=false}},
+ hex(h){const n=parseInt(h.slice(1),16);return[(n>>16&255)/255,(n>>8&255)/255,(n&255)/255]},
+ start(){if(!this.init())return false;const c=$("bgl");c.style.display="block";const d=Math.min(devicePixelRatio||1,1.25),w=c.clientWidth||600,h=c.clientHeight||340;c.width=Math.round(w*d);c.height=Math.round(h*d);this.gl.viewport(0,0,c.width,c.height);this.t0=performance.now();cancelAnimationFrame(this.raf);this.loop();return true},
+ loop(){this.raf=requestAnimationFrame(()=>{if($("dice").hidden)return;const gl=this.gl,u=this.u,c=$("bgl"),A=this.hex(VIS.aura),M=this.hex(VIS.mesa),E={Sangue:0,Morte:1,Conhecimento:2,Medo:3}[VIS.el];
+  BG.boost=Math.max(0,BG.boost-.012);gl.uniform1f(u.uT,(performance.now()-this.t0)/1000);gl.uniform2f(u.uR,c.width,c.height);gl.uniform3f(u.uA,A[0],A[1],A[2]);gl.uniform3f(u.uM,M[0],M[1],M[2]);gl.uniform1f(u.uB,BG.boost);gl.uniform1f(u.uE,VIS.fx&&E!==undefined?E:4);gl.drawArrays(gl.TRIANGLES,0,3);this.loop()})}};
+BGL.fs=`#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+uniform float uT;uniform vec2 uR;uniform vec3 uA;uniform vec3 uM;uniform float uB;uniform float uE;
+float h11(float n){return fract(sin(n*127.1)*43758.5453);}
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+float nz(vec2 p){vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.0-2.0*f);return mix(mix(h21(i),h21(i+vec2(1.0,0.0)),f.x),mix(h21(i+vec2(0.0,1.0)),h21(i+vec2(1.0,1.0)),f.x),f.y);}
+float fbm(vec2 p){float a=0.5;float s=0.0;for(int i=0;i<5;i++){s+=a*nz(p);p=p*2.03+vec2(7.1,3.7);a*=0.5;}return s;}
+float rdg(vec2 p){float a=0.5;float s=0.0;for(int i=0;i<4;i++){s+=a*(1.0-abs(2.0*nz(p)-1.0));p=p*2.1+vec2(3.3,9.1);a*=0.5;}return s;}
+mat2 rot(float a){float c=cos(a);float s=sin(a);return mat2(c,-s,s,c);}
+float sdSeg(vec2 p,vec2 a,vec2 b){vec2 pa=p-a;vec2 ba=b-a;float h=clamp(dot(pa,ba)/dot(ba,ba),0.0,1.0);return length(pa-ba*h);}
+float fall(float w,float d){return 1.0-smoothstep(0.0,w,d);}
+vec3 sangue(vec2 p,vec2 uv){
+ vec3 col=uM*0.55+vec3(0.025,0.0,0.004);
+ float tis=fbm(p*3.0+vec2(uT*0.02,0.0));col+=vec3(0.11,0.012,0.016)*tis*tis*1.6;
+ vec2 w=p*2.2+0.6*vec2(fbm(p*1.7+uT*0.03),fbm(p*1.7+vec2(7.3,2.1)));
+ float r=rdg(w);float vein=smoothstep(0.80,0.97,r);
+ float pul=pow(0.5+0.5*sin(uT*2.6-fbm(p*1.3)*10.0),3.0);
+ float hb=pow(0.5+0.5*sin(uT*2.9),6.0);
+ col+=uA*vein*(0.22+1.0*pul+0.5*hb+uB*1.2);
+ col+=uA*smoothstep(0.55,0.97,r)*0.10*(0.5+hb+uB);
+ for(int i=0;i<8;i++){
+  float fi=float(i);float x=0.08+0.84*h11(fi+1.3);float sp=0.03+0.04*h11(fi+9.1);float head=1.0-fract(uT*sp+h11(fi+4.7));
+  float wd=0.0025+0.0035*h11(fi+2.2);float dx=abs(uv.x-x)*(uR.x/uR.y);
+  float m=fall(wd,dx)*step(head,uv.y);float hd=fall(wd*1.9,length(vec2(dx,(uv.y-head))));float mk=max(m,hd);
+  col=mix(col,vec3(0.30,0.0,0.015),mk*0.9);
+  col+=vec3(0.9,0.25,0.3)*fall(wd*0.3,abs(dx-wd*0.35))*step(head,uv.y)*0.35*mk;
+ }
+ return col;}
+vec3 morte(vec2 p,vec2 uv){
+ vec3 col=uM*0.5;
+ vec2 q=p*2.2+vec2(0.0,-uT*0.05);q+=0.8*vec2(fbm(p*1.5+uT*0.04),fbm(p*1.5-3.0));
+ float s=fbm(q);col+=vec3(0.05,0.035,0.075)*s*1.5+uA*0.05*s*s;
+ vec2 t2=p;t2.x+=0.25*sin(t2.y*3.0+uT*0.8)+0.12*sin(t2.y*7.0-uT*1.3);
+ float t=rdg(vec2(t2.x*4.0,t2.y*1.5-uT*0.06));
+ float low=1.0-smoothstep(-0.1,0.9,uv.y);
+ float ten=smoothstep(0.78,0.93,t)*low;
+ col+=uA*0.40*smoothstep(0.68,0.78,t)*(1.0-smoothstep(0.78,0.88,t))*low*(1.0+uB);
+ col=mix(col,vec3(0.0),ten*0.92);
+ for(int i=0;i<4;i++){
+  float fi=float(i);vec2 c=vec2(sin(uT*0.07+fi*1.9)*0.55,cos(uT*0.05+fi*2.7)*0.3);vec2 d=rot(uT*0.1*(fi-1.5)+fi)*(p-c);
+  float cap=sdSeg(d,vec2(-0.09,0.0),vec2(0.09,0.0))-0.012;float kn=min(length(d-vec2(-0.09,0.0)),length(d-vec2(0.09,0.0)))-0.022;
+  float bd=min(cap,kn);float a=(1.0-smoothstep(-0.002,0.006,bd))*0.30;
+  col=mix(col,vec3(0.78,0.75,0.66)*(0.35+0.4*fbm(p*18.0)),a);
+ }
+ vec2 k=p-vec2(0.52,0.10);float head=length(k-vec2(0.0,0.05))-0.15;vec2 jq=abs(k-vec2(0.0,-0.09))-vec2(0.075,0.045);float jaw=length(max(jq,0.0))+min(max(jq.x,jq.y),0.0);
+ float sk=min(head,jaw);sk=max(sk,-(length(vec2(abs(k.x)-0.06,k.y-0.05))-0.035));sk=max(sk,-(length(k-vec2(0.0,-0.02))-0.018));
+ float vis=0.5+0.5*sin(uT*0.4);float er=smoothstep(0.35,0.7,fbm(p*7.0+uT*0.05));
+ col=mix(col,vec3(0.7,0.68,0.6)*(0.3+0.5*er),(1.0-smoothstep(-0.004,0.004,sk))*er*(0.14+0.25*vis+uB*0.3));
+ return col;}
+vec3 conhec(vec2 p,vec2 uv){
+ vec3 par=mix(vec3(0.09,0.06,0.025),vec3(0.20,0.14,0.06),fbm(p*5.0));
+ par+=0.025*nz(vec2(p.x*90.0,p.y*4.0));par*=0.7+0.5*fbm(p*1.6);
+ float e=smoothstep(0.35,1.0,length(p*vec2(0.8,1.1)));
+ par*=1.0-0.88*e;par+=vec3(0.28,0.09,0.0)*e*fbm(p*4.0+uT*0.05)*0.45;
+ vec3 col=par+uM*0.15;
+ float g=0.0;
+ vec2 q=rot(uT*0.12)*(p-vec2(-0.32,0.02));float r=length(q);float a=atan(q.y,q.x);
+ float rings=min(min(abs(r-0.34),abs(r-0.30)),min(abs(r-0.21),abs(r-0.12)));
+ g=max(g,fall(0.0035,rings));
+ float tick=step(0.5,fract(a*24.0/6.28318))*fall(0.01,max(abs(r-0.32)-0.02,0.0));g=max(g,tick*0.8);
+ for(int i=0;i<12;i++){
+  float fi=float(i);float ca=(fi+0.5)*0.5236;vec2 cp=0.255*vec2(cos(ca),sin(ca));vec2 l=rot(-ca)*(q-cp);float h=h11(fi+3.0);
+  float d=min(sdSeg(l,vec2(-0.012,-0.02),vec2(0.012,0.02*(h*2.0-1.0))),sdSeg(l,vec2(-0.016,0.0),vec2(0.016,0.0)));d=min(d,sdSeg(l,vec2(0.0,-0.02),vec2(0.0,0.02)));
+  g=max(g,fall(0.0035,d));
+ }
+ for(int i=0;i<3;i++){
+  float fi=float(i);vec2 a1=0.15*vec2(cos(fi*2.0944+1.5708),sin(fi*2.0944+1.5708));vec2 a2=0.15*vec2(cos((fi+1.0)*2.0944+1.5708),sin((fi+1.0)*2.0944+1.5708));
+  g=max(g,fall(0.003,sdSeg(q,a1,a2)));g=max(g,fall(0.003,sdSeg(q,-a1,-a2)));
+ }
+ float glow=exp(-rings*40.0)*0.25;
+ col+=uA*(g*1.1+glow)*(0.65+0.35*sin(uT*1.3))*(1.0+uB*1.5);
+ vec2 gp=p*28.0+vec2(uT*0.3,uT*0.8);vec2 gi=floor(gp);float hh=h21(gi);
+ float tw=step(0.97,hh)*fall(0.35,length(fract(gp)-0.5))*(0.5+0.5*sin(uT*2.0+hh*40.0));
+ col+=uA*tw*0.9;
+ return col;}
+vec3 medo(vec2 p,vec2 uv){
+ vec3 col=uM*0.45+vec3(0.01,0.013,0.018);
+ float f1=fbm(p*1.6+vec2(uT*0.03,0.0)+0.7*fbm(p*1.1-uT*0.02));
+ float f2=fbm(p*2.8-vec2(uT*0.045,uT*0.01)+3.0);
+ float f3=fbm(p*0.9+vec2(-uT*0.02,uT*0.015)+9.0);
+ float fog=f1*0.5+f2*0.3+f3*0.35;
+ col+=vec3(0.55,0.62,0.72)*fog*fog*0.55*(1.0+uB*0.6);
+ float shaft=fall(0.35,abs(p.x-0.1+0.12*sin(p.y*2.0+uT*0.2)))*smoothstep(-0.5,0.7,p.y);
+ col+=vec3(0.45,0.52,0.62)*shaft*(0.05+0.08*fbm(p*3.0+uT*0.05));
+ vec2 s=p-vec2(0.55,-0.18);s.x+=0.02*sin(uT*3.0+s.y*9.0);
+ float body=length(vec2(s.x/0.085,(s.y-0.12)/0.45))-1.0;float hd=length(vec2(s.x/0.055,(s.y-0.58)/0.075))-1.0;
+ float vis=smoothstep(0.55,0.95,sin(uT*0.31));float fa=(1.0-smoothstep(-0.1,0.2,min(body,hd)))*vis*(0.55+0.3*fbm(p*5.0+uT*0.2));
+ col=mix(col,vec3(0.0),fa*0.9*(1.0-0.5*fog));
+ float bl=smoothstep(0.88,0.99,sin(uT*0.7+1.3));vec2 eh=vec2(0.55,0.40);
+ col+=uA*bl*vis*(fall(0.012,length(p-eh-vec2(-0.02,0.0)))+fall(0.012,length(p-eh-vec2(0.02,0.0))))*1.5;
+ return col;}
+void main(){
+ vec2 uv=gl_FragCoord.xy/uR;vec2 p=(gl_FragCoord.xy-0.5*uR)/uR.y;
+ vec3 col;
+ if(uE<0.5)col=sangue(p,uv);else if(uE<1.5)col=morte(p,uv);else if(uE<2.5)col=conhec(p,uv);else if(uE<3.5)col=medo(p,uv);else col=uM*0.6;
+ float vg=1.0-smoothstep(0.25,1.15,length(p*vec2(0.85,1.0)));
+ col*=0.25+0.9*vg;
+ col+=(h21(gl_FragCoord.xy+fract(uT)*100.0)-0.5)*0.035;
+ col=1.0-exp(-col*1.25);
+ gl_FragColor=vec4(pow(col,vec3(0.9)),1.0);
+}
+`;
+
+let DIV=0,DTM=0;
+const res=h=>{$("tres").innerHTML=h;out(h)};
+const D3={ok:null,dd:[],
+ init(){if(this.ok!==null)return this.ok;try{if(typeof THREE=="undefined")throw 0;const T=this.T=THREE;
+  const r=this.r=new T.WebGLRenderer({canvas:$("cv3"),antialias:true,alpha:true});r.setPixelRatio(Math.min(devicePixelRatio||1,2));r.outputEncoding=T.sRGBEncoding;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.15;r.shadowMap.enabled=true;r.shadowMap.type=T.PCFSoftShadowMap;
+  const sc=this.sc=new T.Scene();this.cam=new T.PerspectiveCamera(38,1.78,.1,80);
+  sc.add(new T.HemisphereLight(0xffffff,0x222233,.55));
+  const L=new T.DirectionalLight(0xffffff,.9);L.position.set(5,12,5);L.castShadow=true;L.shadow.mapSize.set(1024,1024);Object.assign(L.shadow.camera,{left:-11,right:11,top:11,bottom:-11,near:1,far:40});sc.add(L);
+  this.fl=new T.PointLight(0xffd36b,0,32);this.fl.position.set(0,5,0);sc.add(this.fl);
+  const fl=this.floor=new T.Mesh(new T.PlaneGeometry(90,90),new T.ShadowMaterial({opacity:.55}));fl.rotation.x=-Math.PI/2;fl.receiveShadow=true;sc.add(fl);
+  const sp=document.createElement("canvas");sp.width=sp.height=64;const sx=sp.getContext("2d"),gd=sx.createRadialGradient(32,32,0,32,32,32);gd.addColorStop(0,"rgba(255,255,255,1)");gd.addColorStop(.4,"rgba(255,255,255,.35)");gd.addColorStop(1,"rgba(255,255,255,0)");sx.fillStyle=gd;sx.fillRect(0,0,64,64);const st=new T.CanvasTexture(sp);
+  this.glow=new T.Mesh(new T.PlaneGeometry(20,20),new T.MeshBasicMaterial({map:st,color:VIS.aura,transparent:true,opacity:.4,blending:T.AdditiveBlending,depthWrite:false}));this.glow.rotation.x=-Math.PI/2;this.glow.position.y=.02;sc.add(this.glow);
+  try{const ec=document.createElement("canvas");ec.width=512;ec.height=256;const ex=ec.getContext("2d");ex.fillStyle="#0c0c12";ex.fillRect(0,0,512,256);ex.fillStyle="#fff";ex.fillRect(60,30,110,50);ex.fillRect(300,40,90,40);ex.fillStyle="#ffcf9a";ex.fillRect(200,90,60,25);ex.fillStyle="#5a6a9a";ex.fillRect(0,150,512,106);const et=new T.CanvasTexture(ec);et.mapping=T.EquirectangularReflectionMapping;et.encoding=T.sRGBEncoding;const pm=new T.PMREMGenerator(r);sc.environment=pm.fromEquirectangular(et).texture;pm.dispose()}catch(e){}
+  const mkP=(n,sz)=>{const ge=new T.BufferGeometry(),ar=new Float32Array(n*3).fill(-50);ge.setAttribute("position",new T.BufferAttribute(ar,3));const pt=new T.Points(ge,new T.PointsMaterial({size:sz,map:st,transparent:true,depthWrite:false,blending:T.AdditiveBlending,color:VIS.aura}));pt.frustumCulled=false;sc.add(pt);return{pt,ar,n,v:new Float32Array(n*3)}};
+  this.amb=mkP(70,.5);this.bur=mkP(180,.45);
+  this.rings=[0,1].map(()=>{const m=new T.Mesh(new T.RingGeometry(.92,1,64),new T.MeshBasicMaterial({color:0xffd36b,transparent:true,opacity:0,side:T.DoubleSide,blending:T.AdditiveBlending,depthWrite:false}));m.rotation.x=-Math.PI/2;m.position.y=.05;sc.add(m);return m});
+  this.sc3={};this.sg=new T.SphereGeometry(.2,24,16);this.mats={};this.tex();this.Q1=new T.Quaternion();this.Q2=new T.Quaternion();this.Y=new T.Vector3(0,1,0);this.hc={x:0,z:3};this.bind();return this.ok=true}catch(e){return this.ok=false}},
+ d10(){const T=this.T,a=.14,s36=Math.sin(Math.PI/5),s72=Math.sin(2*Math.PI/5),H=a*(s72+2*s36)/(2*s36-s72),k=.85,P=[],U=[],D=[];
+  for(let i=0;i<5;i++){const A=2*Math.PI*i/5,B=A+Math.PI/5;U.push([Math.cos(A)*k,a*k,Math.sin(A)*k]);D.push([Math.cos(B)*k,-a*k,Math.sin(B)*k])}
+  const Tp=[0,H*k,0],Bt=[0,-H*k,0],kites=[];for(let i=0;i<5;i++){kites.push([Tp,U[i],D[i],U[(i+1)%5]]);kites.push([Bt,D[i],U[(i+1)%5],D[(i+1)%5]])}
+  const pos=[],uv=[];kites.forEach(q=>{[[0,1,2],[0,2,3]].forEach(t=>{const v=t.map(j=>q[j]),c=[0,1,2].map(x=>(v[0][x]+v[1][x]+v[2][x])/3),e1=[0,1,2].map(x=>v[1][x]-v[0][x]),e2=[0,1,2].map(x=>v[2][x]-v[0][x]),nr=[e1[1]*e2[2]-e1[2]*e2[1],e1[2]*e2[0]-e1[0]*e2[2],e1[0]*e2[1]-e1[1]*e2[0]];if(nr[0]*c[0]+nr[1]*c[1]+nr[2]*c[2]<0)v.reverse();v.forEach(w=>{pos.push(...w);uv.push(Math.atan2(w[2],w[0])/(2*Math.PI)+.5,Math.acos(Math.max(-1,Math.min(1,w[1]/Math.hypot(...w))))/Math.PI)})})});
+  const g=new T.BufferGeometry();g.setAttribute("position",new T.BufferAttribute(new Float32Array(pos),3));g.setAttribute("uv",new T.BufferAttribute(new Float32Array(uv),2));g.computeVertexNormals();return g},
+ shape(n){const T=this.T,m={2:4,3:6,4:4,6:6,8:8,10:10,12:12,20:20}[n]||20;if(this.sc3[m])return this.sc3[m];
+  const g=m==4?new T.TetrahedronGeometry(1.05,0):m==6?new T.BoxGeometry(1.15,1.15,1.15).toNonIndexed():m==8?new T.OctahedronGeometry(1.05,0):m==12?new T.DodecahedronGeometry(1,0):m==10?this.d10():new T.IcosahedronGeometry(1,0),pa=g.attributes.position,V=i=>new T.Vector3().fromBufferAttribute(pa,i),F=[];
+  for(let t=0;t<pa.count;t+=3){const a=V(t),b=V(t+1),c=V(t+2),ct=a.clone().add(b).add(c).divideScalar(3),nr=b.clone().sub(a).cross(c.clone().sub(a)),ar=nr.length()/2;nr.normalize();if(nr.dot(ct)<0)nr.negate();
+   let f=F.find(f=>f.n.dot(nr)>.999);if(!f){f={n:nr.clone(),cs:new T.Vector3(),ar:0,vs:[]};F.push(f)}f.cs.addScaledVector(ct,ar);f.ar+=ar;f.vs.push(a,b,c)}
+  F.forEach(f=>{f.c=f.cs.clone().divideScalar(f.ar);f.rc=f.vs.reduce((s,v)=>s+v.distanceTo(f.c),0)/f.vs.length;const u=f.vs[0].clone().sub(f.c).normalize(),rg=u.clone().cross(f.n);f.q=new T.Quaternion().setFromRotationMatrix(new T.Matrix4().makeBasis(rg,u,f.n))});
+  const N=F.length,num=Array(N).fill(0);let p=0;
+  if(m==4)F.forEach((f,i)=>num[i]=i+1);else F.forEach((f,i)=>{if(num[i])return;const j=F.findIndex((h,x)=>x!=i&&h.n.dot(f.n)<-.99),a=p%2==0?N-p:p+1;num[i]=a;if(j>=0)num[j]=N+1-a;p++});
+  const ps=F[0].rc*{4:1.1,6:1.15,8:1.1,10:.95,12:1.2,20:1.09}[m];
+  return this.sc3[m]={g,eg:new T.EdgesGeometry(g),pg:new T.PlaneGeometry(ps,ps),F,num,inr:F[0].c.dot(F[0].n),m,sz:{4:1,6:.95,8:.95,10:.9,12:.95,20:1}[m]}},
+ tex(){const T=this.T;this.nc=VIS.num;for(let n=1;n<=20;n++){const c=document.createElement("canvas");c.width=c.height=128;const x=c.getContext("2d");x.textAlign="center";x.textBaseline="middle";x.lineJoin="round";x.fillStyle=VIS.num;
+  if(n==20){x.beginPath();x.arc(64,46,30,0,6.283);x.fill();x.globalCompositeOperation="destination-out";x.beginPath();x.arc(76,40,28,0,6.283);x.fill();x.globalCompositeOperation="source-over";x.font="bold 40px system-ui,Arial,sans-serif";x.fillText("20",64,100)}
+  else{x.font="bold 76px system-ui,Arial,sans-serif";x.lineWidth=7;x.strokeStyle="rgba(0,0,0,.55)";x.strokeText(n,64,62);x.fillText(n,64,62);if(n==6||n==9)x.fillRect(42,104,44,8)}
+  const t=new T.CanvasTexture(c);t.encoding=T.sRGBEncoding;t.anisotropy=4;if(this.mats[n]){this.mats[n].map.dispose();this.mats[n].map=t;this.mats[n].needsUpdate=true}else this.mats[n]=new T.MeshBasicMaterial({map:t,transparent:true,depthWrite:false,toneMapped:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2})}},
+ shellTex(){const T=this.T,c=document.createElement("canvas");c.width=512;c.height=256;const x=c.getContext("2d"),R=Math.random,a=VIS.aura,e=VIS.el;x.lineCap="round";x.shadowColor=a;x.shadowBlur=6;
+  if(e=="Sangue"){x.strokeStyle=a;for(let i=0;i<22;i++){let px=R()*512,py=R()*256,an=R()*6.283;x.lineWidth=1+R()*2.2;x.beginPath();x.moveTo(px,py);for(let k=0;k<14;k++){an+=(R()-.5);px+=Math.cos(an)*14;py+=Math.sin(an)*14;x.lineTo(px,py)}x.stroke()}}
+  else if(e=="Morte"){x.strokeStyle="#05000a";x.shadowBlur=8;for(let i=0;i<14;i++){let px=R()*512,py=R()*256,an=R()*6.283,wd=2+R()*4;for(let k=0;k<12;k++){const sx=px,sy=py;an+=(R()-.5)*1.4;px+=Math.cos(an)*16;py+=Math.sin(an)*16;wd=Math.max(.8,wd*.93);x.lineWidth=wd;x.beginPath();x.moveTo(sx,sy);x.lineTo(px,py);x.stroke()}}}
+  else if(e=="Conhecimento"){x.strokeStyle=a;x.lineWidth=1.6;for(let i=0;i<7;i++){const cx=R()*512,cy=30+R()*196,r=18+R()*22;x.beginPath();x.arc(cx,cy,r,0,6.283);x.stroke();x.beginPath();x.arc(cx,cy,r*.6,0,6.283);x.stroke();for(let k=0;k<6;k++){const an=k*1.047+R();x.beginPath();x.moveTo(cx+Math.cos(an)*r*.6,cy+Math.sin(an)*r*.6);x.lineTo(cx+Math.cos(an)*r,cy+Math.sin(an)*r);x.stroke()}}}
+  else if(e=="Medo"){x.shadowBlur=0;for(let i=0;i<18;i++){const cx=R()*512,cy=R()*256,r=30+R()*50,g=x.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,"rgba(220,235,255,.5)");g.addColorStop(1,"rgba(220,235,255,0)");x.fillStyle=g;x.fillRect(cx-r,cy-r,r*2,r*2)}}
+  const t=new T.CanvasTexture(c);t.encoding=T.sRGBEncoding;return t},
+ apply(){if(!this.sc)return;this.glow.material.color.set(VIS.aura);this.amb.pt.material.color.set(VIS.aura);if(this.nc!=VIS.num)this.tex();const k=VIS.el+VIS.aura;if(this.sk!=k){this.sk=k;this.sh=VIS.el=="Nenhum"?null:this.shellTex()}},
+ mk(sh,n){const T=this.T,gr=new T.Group(),c=new T.Color(VIS.dado),cr=VIS.est!="solido",own=[];
+  const fm=new T.MeshPhysicalMaterial(cr?{color:c,roughness:.06,metalness:0,clearcoat:1,clearcoatRoughness:.04,transparent:true,opacity:.42,envMapIntensity:1.3,flatShading:true}:{color:c,roughness:.35,metalness:.15,clearcoat:.6,flatShading:true});own.push(fm);
+  const m=new T.Mesh(sh.g,fm);m.castShadow=true;gr.add(m);
+  if(cr){const bm=new T.MeshStandardMaterial({color:c.clone().multiplyScalar(.28),roughness:.4,side:T.BackSide,transparent:true,opacity:.75,flatShading:true}),b=new T.Mesh(sh.g,bm);b.renderOrder=1;m.renderOrder=3;gr.add(b);
+   const cm=new T.MeshStandardMaterial({color:c.clone().multiplyScalar(.12),roughness:.3,metalness:.3,flatShading:true,emissive:new T.Color(VIS.aura),emissiveIntensity:.12}),core=new T.Mesh(sh.g,cm);core.scale.setScalar(.6);core.rotation.set(.5,.8,.2);core.renderOrder=2;gr.add(core);
+   const om=new T.MeshStandardMaterial({color:new T.Color(VIS.aura),emissive:new T.Color(VIS.aura),emissiveIntensity:.9,roughness:.2}),orb=new T.Mesh(this.sg,om);orb.renderOrder=2;orb.scale.setScalar(1.6);gr.add(orb);gr.userData.orb=orb;own.push(bm,cm,om)}
+  if(this.sh){const sm=new T.MeshBasicMaterial({map:this.sh,transparent:true,opacity:.5,depthWrite:false,blending:VIS.el=="Morte"?T.NormalBlending:T.AdditiveBlending}),shm=new T.Mesh(sh.g,sm);shm.scale.setScalar(1.012);shm.renderOrder=4;gr.add(shm);gr.userData.sh=shm;own.push(sm)}
+  const lm=new T.LineBasicMaterial({color:0xffffff,transparent:true,opacity:cr?.5:.25});own.push(lm);gr.add(new T.LineSegments(sh.eg,lm));
+  sh.F.forEach((f,i)=>{const p=new T.Mesh(sh.pg,this.mats[(sh.num[i]-1)%n+1]);p.position.copy(f.c).addScaledVector(f.n,.006);p.quaternion.copy(f.q);p.renderOrder=5;gr.add(p)});gr.userData.m=m;gr.userData.inr=sh.inr;gr.userData.own=own;return gr},
+ size(){const cv=$("cv3"),w=cv.clientWidth||600,h=cv.clientHeight||340,cam=this.cam;this.r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();const hf=2*Math.atan(Math.tan(19*Math.PI/180)*cam.aspect),d=Math.max(11,(this.W/2+.8)/Math.tan(hf/2),(this.Dp||0)*2.1+6);this.vw=d*Math.tan(hf/2)*.8;cam.position.set(0,.837*d,.3+.548*d);cam.lookAt(0,0,.3);this.cp={x:cam.position.x,y:cam.position.y,z:cam.position.z}},
+ go(fin,idx,done,pick,ex){if(!this.init())return false;try{const T=this.T,q=fin.length,sd=(ex&&ex.sd)||fin.map(()=>20),na=ex&&ex.na!=null?ex.na:q,G=[[0,na],[na,q]].filter(g=>g[1]>g[0]),lim=q>10?7:5;let R=0;G.forEach(g=>{g.cols=Math.min(g[1]-g[0],lim);g.r0=R;R+=Math.ceil((g[1]-g[0])/g.cols)});
+  const mc=Math.max(...G.map(g=>g.cols)),sp=mc>5?1.9:2.5,sca=sp<2.2?.8:1;
+  $("cv3").style.display="block";$("tray").style.display="none";$("wrap3").classList.remove("glow20");this.W=mc*sp+2;this.Dp=R*sp;this.size();this.apply();
+  this.dd.forEach(d=>{this.sc.remove(d);(d.userData.own||[]).forEach(x=>x.dispose())});this.dd=[];
+  const rnd=()=>new T.Vector3(Math.random()-.5,Math.random()-.5,Math.random()-.5).normalize();
+  fin.forEach((v,i)=>{const g=i<na?G[0]:G[G.length-1],k=i-g[0],col=k%g.cols,row=Math.floor(k/g.cols),inRow=Math.min(g.cols,g[1]-g[0]-row*g.cols),n=sd[i],sh=this.shape(n),f=Math.max(0,sh.num.findIndex(x=>(x-1)%n+1==v)),d=this.mk(sh,n),qa=new T.Quaternion().setFromUnitVectors(sh.F[f].n,new T.Vector3(0,1,0)),qy=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),Math.random()*6.283);
+   d.scale.setScalar(sca*sh.sz);d.userData.role=i<na?"a":"d";d.userData.o={lx:(col-(inRow-1)/2)*sp,lz:(g.r0+Math.floor(k/g.cols)-(R-1)/2)*sp+.4,h0:3.2,tx:(col-(inRow-1)/2)*sp,tz:(g.r0+Math.floor(k/g.cols)-(R-1)/2)*sp+.4,qf:qy.multiply(qa),a1:rnd(),a2:rnd(),w1:(7+Math.random()*5)*Math.PI,w2:(5+Math.random()*5)*Math.PI,sx:8+Math.random()*3,sz:(Math.random()-.5)*5,dl:i*.09};this.sc.add(d);this.dd.push(d)});
+  this.dd.forEach(d=>{const o=d.userData.o;o.q0=new T.Quaternion().copy(o.qf).multiply(new T.Quaternion().setFromAxisAngle(o.a1,o.w1)).multiply(new T.Quaternion().setFromAxisAngle(o.a2,o.w2));o.hx=o.lx*.8;o.hz=(o.lz-.4)*.8});
+  const A=this.amb,am=AM[VIS.el]||AM.Nenhum;A.pt.visible=!!VIS.fx;A.pt.material.size=am.sz;for(let i=0;i<A.n;i++){const j=i*3,o=this.dd[i%this.dd.length].userData.o;A.ar[j]=o.tx+(Math.random()-.5)*2.4;A.ar[j+1]=Math.random()*3;A.ar[j+2]=o.tz+(Math.random()-.5)*2.4;A.v[j+1]=(am.vy<0?-1:1)*(.5+Math.random()*.9)}
+  this.bur.pt.material.opacity=0;this.rings.forEach(m=>m.material.opacity=0);this.fl.intensity=0;
+  this.fxm=VIS.fx&&idx>=0?(pick==20?20:pick==1?1:0):0;this.t0=performance.now();this.lt=this.t0;this.end=false;this.idx=idx;this.done=done;this.man=VIS.man!==false;this.state=this.man?"hold":"roll";this.tl=this.t0;this.dur=1.9;this.hc={x:0,z:Math.min(4.2,this.Dp/2+1.7)};this.drag=null;$("bthr").hidden=!this.man;$("hint3").hidden=!this.man;cancelAnimationFrame(this.raf);this.loop();return true}catch(e){this.ok=false;return false}},
+ bind(){const cv=$("cv3"),P=this;cv.addEventListener("click",e=>e.stopPropagation());
+  cv.addEventListener("pointerdown",e=>{if(P.state!="hold")return;try{cv.setPointerCapture(e.pointerId)}catch(_){}P.drag={s:[]};P.move(e)});
+  cv.addEventListener("pointermove",e=>{if(P.drag)P.move(e)});
+  const up=e=>{if(!P.drag)return;P.move(e);P.release()};cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",up)},
+ pt(x,y){const T=this.T,rc=this.rc||(this.rc=new T.Raycaster()),pl=this.pl||(this.pl=new T.Plane(new T.Vector3(0,1,0),-1.5)),o=new T.Vector3();rc.setFromCamera({x,y},this.cam);if(!rc.ray.intersectPlane(pl,o))return{x:this.hc.x,z:this.hc.z};return{x:Math.max(-9,Math.min(9,o.x)),z:Math.max(-7,Math.min(7,o.z))}},
+ move(e){const r=$("cv3").getBoundingClientRect(),p=this.pt((e.clientX-r.left)/r.width*2-1,-((e.clientY-r.top)/r.height*2-1));this.hc.x=p.x;this.hc.z=p.z;this.drag.s.push({x:p.x,z:p.z,t:performance.now()});if(this.drag.s.length>10)this.drag.s.shift()},
+ release(){const s=this.drag.s,b=s[s.length-1];let a=s[0];for(const q of s)if(b.t-q.t<=140){a=q;break}const dt=Math.max(.016,(b.t-a.t)/1000);let vx=(b.x-a.x)/dt,vz=(b.z-a.z)/dt;const sp=Math.hypot(vx,vz);if(sp<2){vx=-b.x*1.2;vz=-(b.z+.5)*2.4}else if(sp>16){vx*=16/sp;vz*=16/sp}this.launch(vx,vz)},
+ auto(){if(this.state!="hold")return;this.drag=null;this.launch(-this.hc.x*1.2,-(this.hc.z+.5)*2.4)},
+ launch(vx,vz){if(this.state!="hold")return;this.state="roll";this.drag=null;$("bthr").hidden=true;$("hint3").hidden=true;
+  const sp=Math.hypot(vx,vz),k=Math.min(1.5,.55+sp/7),Wf=(this.W-2)/2,Df=this.Dp/2,A=Math.max(0,(this.vw||6)-Wf),zr=Math.max(0,2.6-Df),ex=Math.round(k*2);
+  const lx=Math.max(-A,Math.min(A,this.hc.x+vx*.3)),lz=Math.max(-zr,Math.min(zr*.7,this.hc.z+vz*.3));
+  this.dd.forEach((d,i)=>{const o=d.userData.o;o.sx=d.position.x;o.sz=d.position.z;o.h0=Math.max(.8,d.position.y-d.userData.inr*d.scale.x);o.tx=lx+o.lx;o.tz=lz+o.lz;o.ba=k;o.dl=i*.04;o.w1+=2*Math.PI*ex;o.w2+=2*Math.PI*Math.max(0,ex-1)});
+  this.dur=1.5+k*.45;this.tl=performance.now()},
+ loop(){this.raf=requestAnimationFrame(()=>{if($("dice").hidden)return;const now=performance.now(),t=(now-this.t0)/1000,h=Math.min(.05,(now-this.lt)/1000);this.lt=now;let end=true;
+  this.dd.forEach(d=>{const o=d.userData.o,p=Math.min(1,Math.max(0,((now-this.tl)/1000-o.dl)/this.dur)),e=1-Math.pow(1-p,3),k=1-p,r=d.userData.inr*d.scale.x;
+   if(this.state=="hold"){const i=this.dd.indexOf(d);d.position.set(this.hc.x+o.hx,(this.drag?2.1:1.5)+.12*Math.sin(t*2+i),this.hc.z+o.hz);d.quaternion.copy(o.q0).multiply(this.Q1.setFromAxisAngle(this.Y,.18*Math.sin(t*.9+i)));end=false}else{d.position.set(o.sx+(o.tx-o.sx)*e,r+o.h0*k*k+1.4*(o.ba||1)*Math.pow(k,1.6)*Math.abs(Math.sin(Math.PI*2.5*p)),o.sz+(o.tz-o.sz)*e);d.quaternion.copy(o.qf).multiply(this.Q1.setFromAxisAngle(o.a1,Math.pow(k,1.2)*o.w1)).multiply(this.Q2.setFromAxisAngle(o.a2,Math.pow(k,1.2)*o.w2));if(p<1)end=false}const sh=d.userData.sh;if(sh)sh.material.opacity=VIS.fx?.3+.45*PU(t):.3;const ob=d.userData.orb;if(ob&&!(this.end&&this.fxm==20))ob.scale.setScalar(1.6*(1+.2*PU(t)))});
+  if(VIS.fx){const A=this.amb;for(let i=0;i<A.n;i++){const j=i*3;A.ar[j+1]+=A.v[j+1]*h;A.ar[j]+=Math.sin(t*2+i)*.004;if(A.v[j+1]<0){if(A.ar[j+1]<0)A.ar[j+1]=3.4}else if(A.ar[j+1]>3.4)A.ar[j+1]=.1}A.pt.geometry.attributes.position.needsUpdate=true}
+  if(end&&!this.end){this.end=true;this.te=t;this.hl();this.done()}
+  if(this.end)this.fx(t-this.te,h);
+  this.r.render(this.sc,this.cam);this.loop()})},
+ hl(){const k=this.fxm;this.dd.forEach((d,i)=>{const m=d.userData.m.material,u=d.userData;if(i==this.idx){m.emissive.set(k==1?0x300006:0x6a4a00);m.emissiveIntensity=1;if(u.orb){u.orb.material.color.set(k==1?0xff1a2e:0xffd36b);u.orb.material.emissive.set(k==1?0xff1a2e:0xffd36b)}d.scale.multiplyScalar(1.2)}else if(u.role!="d"&&this.idx>=0){m.color.multiplyScalar(.55);if(u.orb)u.orb.material.emissiveIntensity=.25}});
+  if(!k)return;$("fxt").innerHTML=ban(k);if(k==20)$("wrap3").classList.add("glow20");
+  const B=this.bur,o=this.dd[this.idx].userData.o,col=k==20?0xffd36b:0xff1a2e;B.pt.material.color.set(k==20&&VIS.el!="Nenhum"?VIS.aura:col);B.pt.material.opacity=1;this.fl.color.set(col);this.rings.forEach(m=>m.material.color.set(col));
+  for(let i=0;i<B.n;i++){const j=i*3,a=Math.random()*6.283,s=1.5+Math.random()*(k==20?5:2.5);B.ar[j]=o.tx;B.ar[j+1]=1;B.ar[j+2]=o.tz;B.v[j]=Math.cos(a)*s;B.v[j+1]=1.5+Math.random()*4.5;B.v[j+2]=Math.sin(a)*s}},
+ fx(te,h){const k=this.fxm;if(!k)return;const B=this.bur,w=this.dd[this.idx],o=w.userData.o,cam=this.cam,cp=this.cp;
+  if(te<2.4){B.pt.material.opacity=Math.max(0,1-te/2.2);for(let i=0;i<B.n;i++){const j=i*3;B.ar[j]+=B.v[j]*h;B.ar[j+1]+=B.v[j+1]*h;B.ar[j+2]+=B.v[j+2]*h;B.v[j+1]-=6*h;if(B.ar[j+1]<0){B.ar[j+1]=0;B.v[j+1]*=-.3}}B.pt.geometry.attributes.position.needsUpdate=true}
+  this.rings.forEach((m,i)=>{const q=te-i*.25;if(k==20&&q>0&&q<1.4){m.position.x=o.tx;m.position.z=o.tz;m.scale.setScalar(.5+q*8);m.material.opacity=.9*(1-q/1.4)}else if(k==1&&i==0&&te<1){m.position.x=o.tx;m.position.z=o.tz;m.scale.setScalar(.5+te*5);m.material.opacity=.6*(1-te)}else m.material.opacity=0});
+  this.fl.position.set(o.tx,4,o.tz);this.fl.intensity=te<1.2?(k==20?9:4)*Math.exp(-te*3.5):0;
+  if(k==20){w.userData.m.material.emissiveIntensity=1+.6*Math.sin(te*9);if(w.userData.orb)w.userData.orb.scale.setScalar(1.6+.45*Math.sin(te*9))}
+  if(te<.5){const a=(1-te*2)*.12;cam.position.set(cp.x+Math.sin(te*80)*a,cp.y+Math.cos(te*70)*a,cp.z)}else cam.position.set(cp.x,cp.y,cp.z)}};
+function mostrar(fin,idx,pick,fim,ex){clearInterval(DIV);clearTimeout(DTM);$("dice").hidden=false;$("tres").innerHTML="";$("fxt").innerHTML="";$("bthr").hidden=true;$("hint3").hidden=true;$("wrap3").classList.remove("glow20");BG.go();
+ const rm=matchMedia("(prefers-reduced-motion: reduce)").matches,end=()=>{if(VIS.fx&&pick==20)BG.boost=1;fim();DTM=setTimeout(()=>{$("dice").hidden=true},(pick==20||pick==1)&&VIS.fx?5500:4000)};
+ if(!rm&&D3.go(fin,idx,end,pick,ex))return;
+ $("cv3").style.display="none";const tr=$("tray");tr.style.display="flex";const n0=ex&&ex.na!=null?ex.na:fin.length;tr.innerHTML=fin.slice(0,n0).map(()=>'<div class="d20 r">?</div>').join("");
+ const ds=tr.querySelectorAll(".d20"),f2=()=>{ds.forEach((d,i)=>{d.classList.remove("r");d.textContent=fin[i];d.classList.add(i==idx?"win":"lose")});if(VIS.fx&&(pick==20||pick==1))$("fxt").innerHTML=ban(pick);end()};
+ if(rm)return f2();let t=0;DIV=setInterval(()=>{ds.forEach(d=>d.textContent=1+Math.floor(Math.random()*20));t+=70;if(t>=900){clearInterval(DIV);f2()}},70)}
+function rollA(k){const A=ea(k),ov=$("aq_"+k).value,cd=cmod(k,"",0),n0=(ov===""?A:+ov)+cd,q=Math.min(30,n0>0?n0:2),best=n0>0,fin=Array.from({length:q},()=>d6(20)),pick=best?Math.max(...fin):Math.min(...fin),nm=AT.find(a=>a[0]==k)[1];
+ mostrar(fin,fin.indexOf(pick),pick,()=>res(`<b>${nm}</b>: ${q}d20${cd?` (cond. ${cd}d20)`:""} [${fin.join(", ")}] → ${best?"maior":"menor"} <b style="font-size:20px">${pick}</b>${ebA(k)?` + ${ebA(k)} (item) = <b style="font-size:20px">${pick+ebA(k)}</b>`:""}`))}
+$("vc_pre").innerHTML=PRE.map((p,i)=>`<button class="s" onclick="preset(${i})">${p[0]}</button>`).join("");visUI();
+function expAll(){salvar();const a={v:2,f:{}};IDX.list.forEach(x=>{try{a.f[x.id]=JSON.parse(localStorage.getItem("op_f_"+x.id))}catch(e){}});const t=JSON.stringify(a);$("bk").value=t;$("bk").select();$("res").textContent="Backup de todas as fichas pronto. Copie o texto abaixo (ou use o arquivo, se baixar).";try{const u=URL.createObjectURL(new Blob([t],{type:"application/json"})),l=document.createElement("a");l.href=u;l.download="fichas-op.json";l.click()}catch(e){}}
+function impAll(){try{const a=JSON.parse($("bk").value);if(!a.f)throw 0;salvar();for(const id in a.f){if(!a.f[id])continue;const nid=uid();localStorage.setItem("op_f_"+nid,JSON.stringify(a.f[id]));IDX.list.push({id:nid,n:a.f[id].nome||"Sem nome"})}sidx();fsel();$("res").textContent="Fichas importadas como novas fichas."}catch(e){$("res").textContent="Backup inválido."}}
+function impFile(f){if(!f)return;const r=new FileReader();r.onload=()=>{$("bk").value=r.result;imp()};r.readAsText(f)}
+function salvar(){try{const o={S};CAMPOS.forEach(c=>o[c]=$(c).value);localStorage.setItem("op_f_"+ID,JSON.stringify(o));const it=IDX.list.find(x=>x.id==ID),n=$("nome").value.trim()||"Sem nome";if(it&&it.n!=n){it.n=n;sidx();fsel()}}catch(e){}}
+function aplicar(o){
+ S=o.S;S.hab=S.hab||[];S.atq=S.atq||[];S.qd=S.qd||{};S.inv=S.inv||[];S.foto=S.foto||"";S.eq=S.eq||[];S.atq=S.atq||[];
+ if(!S.mig){if(+o.bdef&&!S.eq.length)S.eq.push({n:"Equipamento anterior",t:"Outro",be:+o.bdef,dq:1,dd:6,ds:"",cm:20,cx:2});S.mig=1}
+ if(S.atq.length){S.atq.forEach(a=>S.eq.push({n:a.n||"",t:"Outra arma",be:0,dq:a.dq||1,dd:a.dd||6,ds:a.ds||"",cm:a.cm||20,cx:a.cx||2}));S.atq=[]}
+ S.cond=S.cond||{};S.res=S.res||{};S.rl=S.rl||[];S.bm=S.bm||{pv:0,pe:0,sa:0};CAMPOS.forEach(c=>{if(o[c]!==undefined)$(c).value=o[c]});fillT(o.trilha);
+ AT.forEach(([k])=>$("a_"+k).value=S.att[k]);
+ PER.forEach((_,i)=>$("p"+i).value=S.per[i]||0);PER.forEach((_,i)=>$("q"+i).value=S.qd[i]||"");for(const k of["pv","pe","sa"])$("bm_"+k).value=S.bm[k]||0;RT.forEach((_,i)=>$("rs"+i).value=S.res[i]||"");lastG=[];syncG();upd();atl();inl();fot();cnl();hst();
+}
+function exp(){salvar();$("bk").value=localStorage.getItem("op_f_"+ID)||JSON.stringify((()=>{const o={S};CAMPOS.forEach(c=>o[c]=$(c).value);return o})());$("bk").select()}
+function imp(){try{const o=JSON.parse($("bk").value);if(o.f)return impAll();nova();aplicar(o);salvar();$("res").textContent="Ficha importada como nova ficha."}catch(e){$("res").textContent="Backup inválido."}}
+function limpar(){if(!confirm("Apagar a ficha atual?"))return;S={att:{agi:1,for:1,int:1,pre:1,vig:1},per:{},cur:{pv:null,pe:null,sa:null}};CAMPOS.forEach(c=>{if(c=="nex")$(c).value=5;else if(c=="classe")$(c).value="Combatente";else if(c=="bdef")$(c).value=0;else if(c=="desl")$(c).value="9m";else $(c).value=$(c).tagName=="SELECT"?$(c).options[0].value:""});aplicar({S});salvar()}
+function tema(){const r=document.documentElement,d=r.dataset.theme=="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"}
+document.addEventListener("input",e=>{const t=e.target.id;if(t=="classe"){if($("classe").value=="Mundano")$("nex").value=0;else if($("nex").value==0)$("nex").value=5;fillT()}if(t=="nex"){if($("nex").value==0)$("classe").value="Mundano";else if($("classe").value=="Mundano")$("classe").value="Combatente";fillT()}if(["origem","classe","cl1","cl2","og1","og2"].includes(e.target.id))syncG();if(e.target.id=="classe"||e.target.id=="nex"){S.cur={pv:null,pe:null,sa:null}}upd();salvar()});
+ini();
+</script><script>if("serviceWorker" in navigator&&location.protocol.indexOf("http")==0)navigator.serviceWorker.register("sw.js").catch(function(){})</script>
+</body></html>
